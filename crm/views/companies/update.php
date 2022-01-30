@@ -63,7 +63,7 @@ $this->params['breadcrumbs'][] = 'Редактирование';
 			[
                 'label' => 'Действия',
                 'format' => 'raw',
-                'value' => function($data) use ($max_id_hsl) {
+                'value' => function($data)  {
                     $str ='';
                     $str .= Html::a('<span class="glyphicon glyphicon-pencil"></span>',
                         Url::to(['contacts/update', 'id'=>$data->id],[]),
