@@ -30,7 +30,7 @@ use yii\helpers\Url;
 	
 	
     <div class="jumbotron">
-        <h1>ООО "Прогресс"</h1>
+        <h1>CRM ООО "Прогресс"</h1>
 
 
         
