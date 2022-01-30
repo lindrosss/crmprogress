@@ -18,7 +18,7 @@ class CompaniesSearch extends Companies
     {
         return [
             [['id'], 'integer'],
-            [['name', 'inn', 'kpp', 'address', 'comment', 'date_create'], 'safe'],
+            [['name', 'inn', 'kpp', 'address', 'comment',  'date_create'], 'safe'],
         ];
     }
 
@@ -40,7 +40,9 @@ class CompaniesSearch extends Companies
      */
     public function search($params)
     {
-        $query = Companies::find();
+        $query = Companies::find()
+        ->leftJoin('contacts', 'contacts.id_company =  companies.id')
+        ->groupBy(['inn']);
 
         // add conditions that should always apply here
 
@@ -63,7 +65,13 @@ class CompaniesSearch extends Companies
             'date_create' => $this->date_create,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name])
+        $query
+            ->andFilterWhere(
+                        [   'OR',
+                            ['like', 'CONCAT_WS(\' \', contacts.fio, contacts.phones, contacts.emails, post)', $this->name],
+                            ['like', 'name', $this->name]
+                         ]
+                    )
             ->andFilterWhere(['like', 'inn', $this->inn])
             ->andFilterWhere(['like', 'kpp', $this->kpp])
             ->andFilterWhere(['like', 'address', $this->address])

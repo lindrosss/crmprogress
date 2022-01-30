@@ -50,6 +50,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'inn',
             'kpp',
             'address:ntext',
+            [
+                'label' => 'Контакты',
+                'attribute' => 'contactsname',
+            ],
             //'comment:ntext',
             //'date_create',
 

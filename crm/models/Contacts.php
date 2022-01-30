@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use app\models\Companies;
 
 /**
  * This is the model class for table "contacts".
@@ -53,5 +54,15 @@ class Contacts extends \yii\db\ActiveRecord
             'post' => 'Должность',
             'date_create' => 'Date Create',
         ];
+    }
+
+    public function getCompany()
+    {
+        return $this->hasOne(Companies::className(), ['id' => 'id_company']);
+    }
+
+    /* Геттер для названия адреса */
+    public function getCompanyName() {
+        return $this->company->name;
     }
 }

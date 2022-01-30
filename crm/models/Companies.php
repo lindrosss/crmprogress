@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use app\models\Contacts;
 
 /**
  * This is the model class for table "companies".
@@ -14,6 +15,7 @@ use Yii;
  * @property string $address
  * @property string $comment
  * @property string $date_create
+ * @property string $contactsname
  */
 class Companies extends \yii\db\ActiveRecord
 {
@@ -54,5 +56,30 @@ class Companies extends \yii\db\ActiveRecord
             'comment' => 'Комментарий',
             'date_create' => 'Date Create',
         ];
+    }
+
+    public function getContacts()
+    {
+        return $this->hasMany(Contacts::className(), ['id_company' => 'id']);
+    }
+
+    /* Геттер для названия адреса */
+    public function getContactsName() {
+
+        $contacts = $this->contacts;
+        //return var_dump($contacts);
+        $contact = '';
+        $eol='
+        ';
+
+
+        if(is_array($contacts)){
+            foreach ($contacts as $item) {
+                $contact .= $item->post . ' ' . $item->fio . ' ' . $item->phones . ' ' . $item->emails .$eol.$eol;
+            }
+        }else{
+            return 'empty';
+        }
+        return $contact;
     }
 }
