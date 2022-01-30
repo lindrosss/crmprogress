@@ -1,0 +1,80 @@
+.vacancy_list_table
+{
+	width: 99%;
+}
+
+.vacancy_list_table:hover
+{
+	cursor: pointer;
+}	
+
+.vacancy_list_table td
+{
+	padding: 5px;
+	border-bottom: 2px solid #000;
+}	
+
+.vacancy_list_table tr.head_tr td{
+	font-weight: bold;
+	background-color: #eeeeee;
+}
+
+tr.selected td
+{
+	border-bottom: 1px solid #ddd;
+	background-color: #ddd;
+}	
+
+.del_vacancy{
+	
+}
+
+#all_vacansieslist,
+#all_sourceslist
+{
+	display: none;
+}	
+
+span.gray{
+	color: #5e5e5e;
+}
+
+#create_vacancy{
+	
+}
+
+#create_vacancy .block,
+#create_time_table_for_market .block,
+#create_time_table_for_vacancy .block,
+#create_candidat .block {
+	margin-bottom: 30px;
+}
+
+#create_vacancy .block p,
+#create_time_table_for_market .block p,
+#create_time_table_for_vacancy .block p{
+	color: #555;
+    margin: 0;
+}
+
+.error_field{
+	border: 1px solid RED !important;
+}	
+
+#create_candidat{
+	display: none;
+	border: 1px solid #ddd;
+	padding-left: 20px;
+}	
+
+hr{
+	   border-top: 1px solid green !important;
+}
+
+#failure{
+	padding: 5px;
+	border: 1px solid #ddd;
+	margin: 20px;
+	margin-left: 0;
+}
+	

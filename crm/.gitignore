@@ -1,0 +1,4 @@
+vendor
+/config/db.php
+/config/web.php
+/config

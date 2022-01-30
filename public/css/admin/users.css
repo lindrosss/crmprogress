@@ -1,0 +1,31 @@
+#list_user
+{
+	margin: 0 auto;
+    width: 40%;
+}
+
+#list_user th
+{
+	text-align: left;
+	background-color: #ddd;
+	padding: 5px;
+}
+
+#list_user td
+{
+	border: 1px solid #ddd;
+	padding: 5px;
+}
+
+#form_usr
+{
+	background-color: #ddd;
+    margin: 40px auto 0;        
+    width: 40%;
+}
+
+#form_usr table
+{
+	width: 100%;
+	padding: 15px;
+}

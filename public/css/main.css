@@ -1,0 +1,18 @@
+#content
+{
+	margin: 0px 10px 50px 40px;
+}
+
+#main_img
+{
+	//margin-bottom: -10px;
+    //margin-left: -50px;
+	width: 90%;
+	margin: 20px;
+}
+
+#content p:first-letter
+{
+	padding-left: 20px;
+}	
+

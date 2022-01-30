@@ -1,0 +1,31 @@
+#contact_content{
+	min-height: 700px;
+}
+
+#contact_table .table_cell
+{
+	padding-right: 10px;
+	padding-top: 10px;
+}
+
+#contact_table 
+{
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+
+.contact_phone
+{
+	color: #333333;
+}
+
+.contact_name
+{
+	color: #4a688c;
+}
+
+.label
+{
+	color: #4a688c;
+	font-size: 20px;
+}

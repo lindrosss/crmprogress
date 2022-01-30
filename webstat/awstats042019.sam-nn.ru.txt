@@ -1,0 +1,761 @@
+AWSTATS DATA FILE 7.7 (build 20180105)
+# If you remove this file, all statistics for date 201904 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.sam-nn.ru.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 1992                
+POS_TIME 2670                
+POS_VISITOR 15921               
+POS_DAY 21730               
+POS_DOMAIN 3550                
+POS_LOGIN 3784                
+POS_ROBOT 3939                
+POS_WORMS 5144                
+POS_EMAILSENDER 5275                
+POS_EMAILRECEIVER 5418                
+POS_SESSION 22536               
+POS_SIDER 22746               
+POS_FILETYPES 5553                
+POS_DOWNLOADS 5756                
+POS_OS 5804                
+POS_BROWSER 6145                
+POS_SCREENSIZE 8433                
+POS_UNKNOWNREFERER 8507                
+POS_UNKNOWNREFERERBROWSER 9022                
+POS_ORIGIN 9246                
+POS_SEREFERRALS 9392                
+POS_PAGEREFS 9610                
+POS_SEARCHWORDS 10479               
+POS_KEYWORDS 10631               
+POS_MISC 2333                
+POS_ERRORS 10690               
+POS_CLUSTER 3640                
+POS_SIDER_404 10819               
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20190501000717 58 10837 10572931442909
+FirstTime 20190401005127
+LastTime 20190430181905
+LastUpdate 20190501010106 1 0 0 0 0
+TotalVisits 251                 
+TotalUnique 139                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 152                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 32 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 99 122 8856639 27 40 360120
+1 98 103 8141851 23 42 876128
+2 89 100 7101398 14 30 632581
+3 89 89 7245549 39 67 803050
+4 84 86 6697320 41 66 2005400
+5 91 94 7259294 34 50 893690
+6 97 119 9635986 19 50 1983662
+7 90 105 8063782 24 57 1042226
+8 102 102 8884524 32 54 527939
+9 101 104 7822156 28 48 746333
+10 105 125 10608360 27 52 529025
+11 98 116 8469164 22 38 320521
+12 92 92 7262452 21 38 581752
+13 100 132 10028684 33 73 1598578
+14 99 116 8881495 38 62 900240
+15 107 129 10102393 37 58 1521896
+16 103 118 9026674 20 40 1257179
+17 99 111 9568332 25 81 1073501
+18 114 125 8744721 20 50 2288298
+19 101 109 7848910 40 59 1446435
+20 101 105 8642210 28 52 921034
+21 110 110 7598903 46 62 805622
+22 126 130 8623848 22 49 500766
+23 97 97 8063317 44 61 1193535
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 2392 2639 203177962
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 28
+YandexBot/ 164 7456093 20190430221147 0
+Googlebot/ 117 393483 20190430235805 0
+^mozilla\/5\.0$ 42 196980 20190429052841 0
+oBot/ 30 0 20190421175042 0
+YandexImages/ 26 4369476 20190430223106 0
+dataprovider\.com 22 121062 20190413143630 0
+bot[\s_+:,\.\;\/\\-] 22 106830 20190430014115 0
+Uptimebot/ 18 14070 20190430194523 0
+Mail\.RU_Bot/ 16 82361 20190422234253 0
+AhrefsBot/ 13 896812 20190430193548 0
+(firefox/)([0-9]\.|[0-1][0]\.) 5 18760 20190429143348 0
+Python\-urllib/ 3 14070 20190411191124 0
+BLEXBot/ 11 60531 20190427014409 0
+no_user_agent 12 56280 20190428073019 0
+spider 12 15816 20190427064509 0
+ia_archiver 4 21566 20190428004423 0
+MSIE[\x20]5 1 4690 20190411124745 0
+[\s_+:,\.\;\/\\-]bot 5 27100 20190405135215 0
+MegaIndex\.ru/ 10 55841 20190404211931 0
+MSIE[\x20]6 12 55979 20190428015118 0
+SemrushBot/ 2 8129 20190419140743 0
+C\-T[\x20]bot 1 4690 20190411124746 0
+python 9 28140 20190425044043 0
+favicon 4 18760 20190420000008 0
+SafeDNSBot 1 4690 20190423142212 0
+yandex 1 17053 20190425161925 0
+netcraft 1 4690 20190402092239 0
+crawl 2 9380 20190428220738 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 7
+css 115 130869 0 0
+png 34 579802 0 0
+ttf 23 10054680 0 0
+html 2264 184740746 0 0
+js 51 10959 0 0
+jpg 47 7173920 0 0
+Unknown 105 486986 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 20
+linuxsuse 1 1
+linuxandroid 12 5
+winlong 65 65
+winxp 120 112
+macosx11 45 23
+ios_iphone 10 3
+win2000 93 93
+macosx9 7 7
+win8 29 10
+ios_ipad 7 2
+winnt 414 414
+macosx12 24 24
+linux 8 8
+win7 847 751
+macosx 13 8
+macosx10 2 2
+win8.1 148 130
+win10 678 618
+Unknown 115 115
+macosx8 1 1
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 111
+firefox66.0 10 4
+firefox57.0 127 127
+chrome52.0.2743.116 1 1
+firefox33.1 63 63
+chrome76977 1 1
+firefox44.0 47 47
+chrome69.0.3497.81 1 1
+edge12 18 18
+chrome72.0.3626.121 64 19
+chrome63.0.3223.8 24 24
+chrome31.0.1650.57 1 1
+firefox34.0 29 29
+chrome58.0.3029.110 37 37
+msie8.0 1 1
+chrome63.0.3239.84 94 94
+chrome42.0.2311.90 2 2
+chrome34.0.1847.132 3 3
+firefox43.0 86 86
+chrome62.0.3250.0 24 24
+firefox59.0 1 1
+chrome60.0.3112.101 2 2
+firefox40.1 105 105
+firefox41.0 20 20
+firefox65.0 1 1
+opera54.0.2952.51 1 1
+opera52.0.2871.40 1 1
+chrome39041 1 1
+chrome66.0.3359.181 11 6
+chrome49.0.2623.112 36 29
+chrome73.0.3683.103 53 14
+chrome65.0.3325.181 1 1
+firefox37.1 58 58
+edge17 10 5
+firefox53.0 30 30
+chrome55.0.2883.87 31 26
+firefox40.0 24 24
+firefox42.0 26 26
+chrome68.0.3440.106 15 12
+chrome63.0.3239.132 4 4
+firefox44.1 17 17
+chrome62.0.3202.94 146 146
+firefox38.0 56 56
+safari12.1 6 1
+opera49.0.2725.47 162 162
+opera36.0.2130.80 1 0
+chrome6965 1 1
+chrome60.0.3112.113 3 3
+firefox45.0 25 25
+firefox47.0 15 15
+chrome51.0.2704.103 1 1
+firefox33.0 18 18
+mozilla 21 21
+safari12.0.3 1 1
+netscape5.0 70 70
+chrome68.0.3440.84 6 6
+firefox60.0 1 1
+firefox43.1 27 27
+firefox39.1 20 20
+firefox36.0 11 11
+safari11.1.2 30 8
+firefox35.0 47 44
+chrome67.0.3396.87 25 19
+firefox30.1 17 17
+safari11.0 10 3
+opera58.0.3135.132 7 2
+chrome68.0.3440.75 8 5
+firefox52.0 71 71
+chrome67.0.3396.79 6 6
+opera55.0.2994.44 8 5
+chrome56.0.2924.87 2 2
+firefox31.0 46 46
+opera58.0.3135.127 6 1
+chrome61.0.3163.100 179 179
+firefox62.0 2 2
+edge16 31 31
+chrome26.0.1410.65 1 1
+chrome62.0.3202.62 19 19
+opera10.01 1 1
+chrome34.0.1847.116 2 2
+chrome22431 1 1
+chrome71.0.3578.99 1 1
+msie9.0 3 3
+Unknown 25 25
+chrome6.0.428.0 1 1
+chrome72.0.3626.109 7 2
+opera11.51 3 3
+firefox32.1 84 84
+opera35.0.2066.37 1 1
+opera58.0.3135.107 1 1
+opera54.0.2952.71 11 8
+opera53.0.2907.99 3 3
+opera53.0.2907.68 4 4
+chrome73.0.3683.86 35 11
+chrome36.0.1985.67 1 1
+firefox30.0 63 63
+firefox56.0 24 24
+chrome41.0.2227.1 1 1
+chrome45.0.2454.94 2 2
+opera54.0.2952.54 2 2
+msie11.0 3 2
+safari9.0 7 2
+chrome67.0.3396.99 4 4
+opera53.0.2907.106 8 5
+firefox37.0 55 55
+chrome48.0.2564.109 7 7
+chrome68.0.3440.91 10 3
+msie10.0 32 8
+firefox51.0 24 24
+opera54.0.2952.64 2 2
+safari11.0.1 3 3
+firefox34.1 21 21
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 8
+\ 20190427222758
+Mozilla/5.0_(compatible;_WebDataStats/1.0_;__https://webdatastats.com/policy.html) 20190425205823
+}__test|O:21:\ 20190411191123
+MixnodeCache/1.8(_https://cache.mixnode.com/) 20190427153535
+Mozilla/5.0_(compatible;_BackupLand/1.0;_https://go.backupland.com/;_Domain_check_for_viruses;) 20190429071624
+Mozilla/5.0_zgrab/0.x 20190430181905
+Go-http-client/1.1 20190429111713
+Mozilla/5.0_Firefox/35.0 20190407064004
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 4
+\ 20190427222758
+Go-http-client/1.1 20190429111713
+}__test|O:21:\ 20190411191123
+MixnodeCache/1.8(_https://cache.mixnode.com/) 20190427153535
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 219 227
+From1 5 5
+From2 32 36
+From3 2009 2009
+From4 127 362
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 4
+www_google_com_hk 2 2
+www_google_com 4 5
+yandexru 25 28
+www_google_ru 1 1
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 16
+http://www.activitysport.com.ua/Ulichnye-trenazhery/Trenazhery-dlja-ulicy 315 315
+http://happykiddi.com.ua/ulichnyie-trenazheryi/ulichnyie-trenazheryi-1 303 303
+http://www.sporthappy.com.ua/Trenazheryi_dlya_ulitsyi/Sportivnye-ploshhadki 276 276
+http://www.sportbiz.com.ua/Ulichnye-trenazhery/Trenazhery-dlja-ulicy 264 264
+http://shvedki.biz.ua 126 126
+http://sportivniy.biz.ua 117 117
+http://ulichniy-trenager.biz.ua 102 102
+http://sport-ploshadki.in.ua 87 87
+http://kardio-trenageri.in.ua 87 87
+http://prof-trenageri.in.ua 84 84
+http://sport-ploshadki.biz.ua 75 75
+http://whatsapplanding.flyland.ru 3 3
+http://whatsappbot.flyland.ru 15 15
+http://shvedki.in.ua 69 69
+http://ploshadki.biz.ua 84 84
+http://lookover.ru 2 2
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 4
+403 10 2272
+500 118 62776
+301 3 699
+404 534 10660060
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 140
+/blog/wp-includes/wlwmanifest.xml 1 -
+//administrator//webconfig.txt.php 2 http://www.google.com.hk
+/assets/index.html 1 -
+/admin/fckeditor/editor/filemanager/connectors/php/connector.php 1 -
+/mysqladmin/ 1 -
+/nova 2 http://sam-nn.ru/nova
+/wp-conde.php 2 -
+/site/wp-includes/wlwmanifest.xml 1 -
+/wp-admin/install.php 1 -
+/2015/wp-includes/wlwmanifest.xml 1 -
+/images/logo.png 2 -
+/assets/modules/docmanager/js/docmanager.js 1 -
+/fckeditor/editor/filemanager/connectors/php/connector.php 1 -
+/sql/ 1 -
+/etm/indy.css 3 http://sam-nn.ru/etm/indy.css
+/test/wp-includes/wlwmanifest.xml 1 -
+/xmlrpc.php 2 -
+/admin/login 1 -
+/mscms/ 3 http://sam-nn.ru/mscms/
+/vamshop.txt 1 -
+/admin/FCKeditor/editor/filemanager/browser/default/connectors/php/connector.php 1 -
+//webconfig.txt.php 2 http://www.google.com.hk
+/kickstart.php 1 -
+/log.php 2 -
+/pma/ 1 -
+/user/register 3 -
+/scripts/admin/popup.js 2 http://sam-nn.ru/scripts/admin/popup.js
+/cms/wp-login.php 1 -
+//wp-login.php 1 -
+/js/api.js 1 -
+/shop/wp-includes/wlwmanifest.xml 1 -
+/FCKeditor/editor/filemanager/connectors/php/connector.php 1 -
+/admin/textolite.css 2 http://sam-nn.ru/admin/textolite.css
+/static/common.css 3 http://sam-nn.ru/static/common.css
+/myadmin/ 1 -
+/store_closed.html 1 -
+/administrator/ 1 -
+/wp-login.php 14 -
+/forum/wp-login.php 1 -
+//user/register/ 2 http://www.google.com.hk
+///webconfig.txt.php 2 http://www.google.com.hk
+/,85.17.123.75 1 -
+/sql.php 1 -
+/engine/engine.php 1 -
+/wp-ajax-hook.php 2 -
+/wp-includes/wlwmanifest.xml 1 -
+/core/xpdo/changelog.txt 1 -
+/wp-content/plugins/temp.php 2 -
+/back.zip 1 -
+/license.php 4 -
+//administrator/ 2 -
+/FCK/editor/filemanager/browser/default/connectors/php/connector.php 1 -
+/ads.txt 54 -
+/fck/editor/filemanager/browser/default/connectors/php/connector.php 1 -
+/administrator/index.php 1 -
+/wordpress/wp-includes/wlwmanifest.xml 1 -
+/sito/wp-includes/wlwmanifest.xml 1 -
+/2016/wp-includes/wlwmanifest.xml 1 -
+/wp-icoud.php 2 -
+/bitrix/admin/ 1 -
+/indy/indy.css 3 http://sam-nn.ru/indy/indy.css
+/rss/catalog/notifystock/ 1 -
+/administrator/fckeditor/editor/filemanager/browser/default/connectors/php/connector.php 1 -
+/sitemap.xml 4 -
+/robots.txt 259 -
+/manager/ 1 -
+/static/cartreminder.js 3 http://sam-nn.ru/static/cartreminder.js
+/hostcmsfiles/main.js 1 -
+/admin/login.php 1 -
+/includes/init.php 1 -
+/password_double_opt.php 1 -
+/user/login 1 -
+/administrator/fckeditor/editor/filemanager/connectors/php/connector.php 1 -
+/js/admin.js 1 -
+/downloader/ 1 -
+/wordpress/wp-login.php 1 -
+/wp1/wp-includes/wlwmanifest.xml 1 -
+//phpmyadmin// 1 -
+/index.php/admin/ 1 -
+/cms/wp-content/themes/AdvanceImage5/functions.php 1 -
+/netcat/admin/ 1 -
+/fckeditor/editor/filemanager/browser/default/connectors/php/connector.php 1 -
+/temp.php 2 -
+/registration/ 1 -
+/fck/editor/filemanager/connectors/php/connector.php 1 -
+/adminer.php 1 -
+/FCK/editor/filemanager/connectors/php/connector.php 1 -
+/phpmyadmin/ 1 -
+/follow.php 1 -
+/web/wp-includes/wlwmanifest.xml 1 -
+/kcfinder/browse.php 1 -
+/FCKeditor/editor/filemanager/browser/default/connectors/php/connector.php 1 -
+/wordpress3/wp-login.php 1 -
+/admin/fckeditor/editor/filemanager/browser/default/connectors/php/connector.php 1 -
+/wp-includes/images/hon2our.php 2 -
+/modules/ 3 http://sam-nn.ru/modules/
+/bps.php 2 -
+/news/wp-includes/wlwmanifest.xml 1 -
+/admin/events/last/ 1 -
+/engine/classes/js/dle_js.js 3 http://sam-nn.ru/engine/classes/js/dle_js.js
+/blog/wp-login.php 1 -
+/wp-content/plugins/yellow-pencil-visual-theme-customizer/css/frame.css 1 -
+/seo_script.php 2 -
+/typo3/border.html 1 -
+/icms 2 http://sam-nn.ru/icms
+/manager 3 http://sam-nn.ru/manager
+/shop_content.php 1 -
+/dbs.php 1 -
+/cms/lang/ru_utf8/css/sbIndex.css 4 http://sam-nn.ru/cms/lang/ru_utf8/css/sbIndex.css
+/admin/ 2 -
+/connectors/system/phpthumb.php 1 -
+/website/wp-includes/wlwmanifest.xml 1 -
+/skins/simpla_blue/style.css 3 http://sam-nn.ru/skins/simpla_blue/style.css
+/admin/FCKeditor/editor/filemanager/connectors/php/connector.php 1 -
+/netcat/ 3 http://sam-nn.ru/netcat/
+/2017/wp-includes/wlwmanifest.xml 1 -
+/assets/images/seo_script.php 2 -
+/redirect.php 1 -
+/include/ajax/textPreview.php 1 -
+//wp-admin/admin-post.php 6 http://www.google.com.hk
+/cms/wp-includes/wlwmanifest.xml 1 -
+/adm/css/errors.css 2 http://sam-nn.ru/adm/css/errors.css
+/js/easy.php 1 -
+/2018/wp-includes/wlwmanifest.xml 1 -
+/wp/wp-login.php 1 -
+/modules/mod_stats.xml 3 http://sam-nn.ru/modules/mod_stats.xml
+/1.zip 1 -
+/wp/wp-includes/wlwmanifest.xml 1 -
+/cms/admin/index.php 1 -
+/media/wp-includes/wlwmanifest.xml 1 -
+/admin 3 http://sam-nn.ru/admin
+/wp-content/plugins/log.php 2 -
+/,85.17.123.70 1 -
+/wp-admin/setup-config.php 1 -
+/cms/ 4 http://sam-nn.ru/cms/
+/index.php 4 -
+/phpMyAdmin/ 1 -
+/news/wp-login.php 1 -
+/phpshop/admpanel/ 1 -
+/wp2/wp-includes/wlwmanifest.xml 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 152
+93.72.93.35 1989 1989 183493206 20190414012048
+72.36.89.14 69 69 323610 20190430181905
+94.29.38.34 20 20 92596 20190430163113
+185.12.124.78 17 17 79730 20190429071624
+60.191.38.77 15 15 70350 20190430061037
+52.53.201.78 12 12 56280 20190428223138
+82.208.70.199 9 23 1035239 20190409132224
+185.164.184.55 8 30 2389186 20190414062811
+95.79.20.73 8 22 1031782 20190426001622
+176.98.69.217 7 7 32830 20190426143752
+54.201.89.200 1 1 4690 20190409111718
+34.219.169.216 1 1 4690 20190418073708
+188.32.144.32 1 4 7804 20190413053545
+90.154.46.82 1 4 7804 20190405143912
+31.173.81.149 5 8 22782 20190405102258
+185.127.25.192 2 2 9380 20190428091130
+5.3.149.219 1 6 25202 20190422195602
+5.188.62.5 1 1 4690 20190422050832
+95.84.203.166 1 6 25202 20190423142003
+66.102.9.24 0 2 17157 
+34.220.31.136 1 1 4690 20190419121752
+37.204.75.202 1 4 7804 20190426200835
+42.115.21.105 1 1 4690 20190417212553
+14.202.253.15 1 1 4690 20190429071400
+91.144.147.214 2 7 599228 20190412154646
+158.69.241.225 1 1 4690 20190427194653
+37.204.198.135 1 5 27170 20190427003610
+54.191.152.55 1 1 4690 20190427082304
+178.137.17.200 5 8 22782 20190404151915
+176.120.237.112 5 8 22782 20190411183956
+92.154.66.108 2 2 4690 20190409095044
+34.222.252.194 1 1 4690 20190404074158
+5.166.201.71 2 7 599228 20190427073039
+109.184.230.178 2 2 9079 20190412201712
+3.81.96.220 1 1 4690 20190427153535
+87.242.74.135 4 4 9079 20190404213744
+95.105.1.181 0 1 352474 
+144.217.71.103 1 1 4690 20190413143631
+2001:4802:7800:1:be76:4eff:fe20:c234 1 1 4690 20190404010611
+95.78.174.216 1 1 0 20190402171629
+91.144.143.221 1 1 4690 20190403020443
+92.240.130.107 2 2 9079 20190403151229
+109.252.53.74 0 1 17053 
+192.99.15.55 2 2 9380 20190411191126
+50.112.31.215 1 1 4690 20190421084648
+95.28.190.165 1 6 162068 20190416074413
+54.149.162.211 1 1 4690 20190403064950
+184.174.38.149 1 1 4690 20190411111203
+77.232.153.155 4 6 18114 20190405040631
+5.188.210.51 2 2 9380 20190406015637
+80.1.135.251 1 1 4690 20190427064207
+109.184.162.94 4 4 18158 20190423041824
+83.149.44.4 3 10 604435 20190429164614
+94.25.239.51 0 2 669326 
+85.143.6.100 3 9 469537 20190430151129
+2001:6d0:ffc8:a0e9:: 1 1 4690 20190427222758
+85.25.211.246 1 1 4690 20190411082521
+176.195.153.203 2 7 599228 20190425181857
+52.70.146.155 1 1 4690 20190430125049
+213.177.107.46 2 7 599228 20190411102517
+54.245.188.164 1 1 4690 20190409034731
+77.233.196.239 5 8 22782 20190418115307
+95.161.223.116 2 3 12761 20190419132358
+109.173.64.217 1 4 7804 20190417182230
+178.57.90.54 0 1 424769 
+94.159.58.130 0 1 430761 
+89.163.242.241 1 1 4690 20190425175846
+178.173.228.190 1 1 4690 20190418100354
+89.178.103.132 1 4 7804 20190427023548
+5.188.210.44 6 6 28140 20190424110043
+181.215.222.122 1 1 4690 20190404070852
+66.102.9.29 1 2 4561 20190408110115
+46.188.98.10 5 8 22782 20190419221153
+83.149.45.162 3 10 604435 20190408153737
+185.153.196.157 1 1 4690 20190407153502
+80.252.154.233 4 4 17857 20190407015852
+109.234.36.228 1 1 4690 20190404155117
+81.255.240.43 2 2 4690 20190428020148
+31.202.101.40 1 1 4690 20190410123050
+66.102.9.19 0 2 3377 
+178.159.37.34 1 1 4690 20190401005127
+188.0.130.108 0 2 34106 
+184.94.240.92 5 5 24731 20190409122256
+212.109.197.60 6 6 38544 20190409200820
+146.120.70.226 2 7 599228 20190406013907
+46.28.68.169 2 2 0 20190423231129
+91.134.113.223 1 1 4690 20190409113749
+46.119.112.31 2 2 9380 20190408234741
+136.169.158.18 0 1 352474 
+54.36.189.105 2 2 9380 20190425120239
+13.57.40.49 1 1 4690 20190420130258
+54.187.69.208 1 1 4690 20190402071440
+95.84.186.86 1 6 25202 20190407001102
+109.236.211.218 4 14 1061590 20190403172225
+5.165.49.244 1 4 9387 20190402115344
+31.173.81.102 5 8 22782 20190402192516
+35.161.71.21 1 1 4690 20190416072029
+193.219.127.227 3 3 12518 20190417031457
+95.79.115.68 3 10 604435 20190426103152
+188.32.229.11 1 4 7637 20190405143920
+193.93.53.167 1 1 4389 20190416060113
+38.131.157.7 1 1 4690 20190425054118
+18.237.134.116 1 1 4690 20190429111713
+46.146.216.92 2 7 599228 20190426111347
+54.202.134.60 1 1 4690 20190423135345
+52.26.220.40 1 1 4690 20190405072504
+137.74.33.249 1 1 4690 20190415060054
+91.243.97.93 2 7 599228 20190424172158
+66.102.9.22 1 2 437439 20190408110018
+13.250.51.149 1 1 4690 20190415193940
+185.86.93.31 1 1 4690 20190405091929
+193.110.76.12 2 2 9079 20190412001645
+47.106.121.52 1 6 123321 20190423020205
+95.211.153.65 1 1 4690 20190421090521
+178.71.55.180 0 1 17053 
+185.86.93.61 1 1 4690 20190415134402
+103.42.213.176 1 1 4690 20190416034640
+52.53.185.124 1 1 0 20190402110207
+62.210.83.78 1 1 4690 20190408021110
+158.69.225.35 1 1 4690 20190413042255
+52.12.11.218 1 1 4690 20190407071627
+124.206.180.180 1 1 4690 20190407064004
+62.152.50.38 2 7 599228 20190423071628
+3.81.42.223 1 1 4690 20190416062312
+91.144.149.241 4 15 874291 20190423131703
+185.86.93.60 1 1 4690 20190425205823
+66.102.9.3 1 1 4690 20190408110017
+192.99.4.102 2 2 9380 20190410055232
+95.163.91.50 2 2 9380 20190423184645
+157.55.195.96 5 8 22782 20190408093253
+104.248.12.43 1 1 4690 20190408165019
+195.34.226.10 2 7 462362 20190423132622
+193.169.52.39 3 3 14070 20190422084633
+93.185.19.28 0 1 415508 
+128.69.166.70 1 6 162068 20190423141959
+178.140.209.211 1 4 7804 20190421165456
+52.11.113.88 1 1 4690 20190428091626
+95.211.226.77 1 1 4690 20190406135857
+109.184.178.165 2 2 9079 20190410231636
+46.17.203.253 3 3 12518 20190406093004
+23.250.16.141 1 1 4690 20190416051552
+64.246.165.150 1 1 4690 20190412034036
+212.92.101.197 1 1 4690 20190408023204
+13.57.233.99 5 5 23450 20190428182023
+165.227.39.237 1 1 0 20190409151002
+195.154.41.214 1 1 4690 20190423181150
+91.134.253.113 4 4 18158 20190402121810
+66.102.9.31 0 1 137211 
+171.103.35.182 1 1 4690 20190402002930
+178.214.254.148 0 1 352474 
+195.62.62.251 5 8 23083 20190414025846
+54.186.40.206 1 1 4690 20190424085924
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 30
+20190401 9 9 41909 6
+20190402 15 22 489467 10
+20190403 15 25 1112879 9
+20190404 201 204 16699063 11
+20190405 281 292 24176239 13
+20190406 132 137 11714755 9
+20190407 10 15 67111 9
+20190408 179 196 15679556 15
+20190409 284 298 24913604 11
+20190410 268 270 23882237 8
+20190411 275 285 25402460 8
+20190412 233 238 21121224 9
+20190413 264 267 23832786 6
+20190414 32 57 3814839 6
+20190415 10 12 892868 8
+20190416 12 18 565831 9
+20190417 10 13 48462 7
+20190418 12 16 72364 6
+20190419 13 17 63683 8
+20190420 4 4 18760 3
+20190421 13 16 63482 8
+20190422 9 14 62722 8
+20190423 25 61 2302451 15
+20190424 8 13 627368 6
+20190425 18 23 674268 9
+20190426 20 50 2623863 8
+20190427 12 24 671722 10
+20190428 9 9 37520 6
+20190429 8 16 644938 5
+20190430 11 18 859531 5
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 12
+5mn-15mn 2
+2mn-5mn 11
+15mn-30mn 2
+0s-30s 203
+30s-2mn 7
+30mn-1h 14
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 12
+/webstat/index.022019.html 1989 183493206 11 11
+/ 275 1247540 217 183
+/kontakty-ooo-sem 78 342342 17 36
+/public/fonts/PT_Sans_Narrow.ttf 23 10054680 1 12
+/elektromontazh-yslugi 10 52330 1 3
+/rekvizity-ooo-sem 6 20634 0 1
+/elektromontazh-yslugi/stroitelstvo-lep 3 20106 2 1
+/licenzii-na-electro-yslugi 2 18698 0 0
+/elektromontazh-yslugi/zemlyanye-raboty 2 11944 1 2
+/elektromontazh-yslugi/sad 2 9730 0 0
+/elektromontazh-yslugi/isz 1 4222 1 1
+/elektromontazh-yslugi/tso 1 6980 0 1
+END_SIDER

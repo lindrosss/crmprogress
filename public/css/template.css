@@ -1,0 +1,213 @@
+@font-face 
+{
+	font-family: 'PT_Sans_Narrow';
+	font-style: normal;
+	font-weight: normal;
+	src: local('PT_Sans_Narrow'), url('../fonts/PT_Sans_Narrow.ttf') format('truetype');
+} 
+
+body,html 
+{
+  padding          : 0;
+  margin           : 0;
+  //margin-bottom    : 10px;
+  font-family: 'tahoma';  
+}
+
+h1, h2
+{
+	text-align: center;
+	color: #0c0c0c;
+	font-family: 'PT_Sans_Narrow';  
+	margin: 0;
+}
+
+p
+{
+	padding          : 0;
+	margin           : 0;
+	font-size: 15px;	
+}
+
+a,
+a:visited,
+a:focus
+{
+	color: #4a688c;
+}
+
+#header
+{
+	background-color: #fff;
+    //display: table;
+    height: 130px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+	z-index: 20;
+	//width: 980px;
+	//margin: 0 auto;
+}
+
+#content_header
+{
+	width: 980px;
+	margin: 0 auto;
+	//display: table;
+}
+
+#left
+{
+	background-color: #eee;
+    height: 100%;
+    position: absolute;
+    width: 200px;
+	left: 0;
+	top: 0;
+	display:none;
+}
+
+#wrapper
+{	
+    //margin: 100px 10px 50px 40px;
+	margin: 0 auto;
+	width: 980px;
+	margin-top: 130px;
+	margin-bottom: 30px;
+	background-color: #f7f7f8;
+	min-height: 100%;
+	box-shadow: 3px 3px 4px #ddd;
+}
+
+#content
+{
+	padding: 10px;
+}
+
+#content p
+{
+	margin-bottom: 10px;
+	line-height: 25px;
+}
+
+
+#right
+{
+	background-color: #555;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+}
+
+#footer
+{
+	background-color: #333;
+    //bottom: 0;
+    height: 50px;
+    width: 100%;
+	color: #fff;
+    //z-index: 2;
+	text-align: center;
+	padding-top: 17px;
+}
+
+.table
+{
+	display: table;
+}
+
+.table_row
+{
+	display: table-row;
+}
+
+.table_cell
+{
+	display: table-cell;
+}
+
+#logo
+{
+	background-color: #fff;
+    border-top-right-radius: 10px;
+    vertical-align: middle;
+    width: 300px;
+}
+
+#menu
+{
+	background-color: #000;
+}
+
+#head_contact
+{
+	//border: 4px solid #20409a;
+    font-size: 27px;
+    text-align: right;
+    vertical-align: middle;
+    width: 680px;
+}
+
+#slogan
+{
+	//left: 337px;
+	//top: 5px;
+    //position: absolute;
+	width: 448px;
+}
+
+#ul_menu
+{
+	background-color: #000;
+    //bottom: 0;
+    color: #fff;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    //position: absolute;
+}
+
+#ul_menu li
+{
+	float: left;
+    font-size: 16px;
+    letter-spacing: 1px;
+    //margin-right: 10px;
+    padding: 5px 10px 5px 5px;
+    text-transform: uppercase;
+}
+
+#ul_menu li:hover
+{
+	background-color: #eee;
+	color: #000;
+}
+
+#ul_menu li.active
+{
+	text-decoration: underline;
+	//font-weight: bold;
+}
+
+#ul_menu a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+#ul_menu li.active {
+    text-decoration: underline;
+}
+
+.block_center
+{
+	margin: 0 auto;
+}
+
+.gallery .table_cell
+{
+	padding: 10px;
+}
