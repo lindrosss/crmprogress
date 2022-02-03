@@ -72,7 +72,11 @@
 					
 					<li <?php if(Request::current()->action()=='kontakty') echo 'class="active"'?>>
 						<a href="/kontakty-ooo-progress">Контакты</a>
-					</li>				
+					</li>
+
+                    <li <?php if(Request::current()->action()=='licens') echo 'class="active"'?>>
+                        <a href="/licens-ooo-progress">Лицензии</a>
+                    </li>
 					
 					
 				</ul>

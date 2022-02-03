@@ -9,151 +9,51 @@
 
 <script src="/public/js/licens.js" type="text/javascript"></script>
 
-<h1>Лицензии компании на услуги по монтажу электрических сетей</h1>
-<p>
-	ООО "Сэм" имеет свидетельство СРО и все необходимые разрешения и сертификаты соответствия для осуществления деятельности по монтажу электросетей любой сложности.
-</p>
+<h1>Сертификаты</h1>
+<br/>
 
-<h2>Свидетельство СРО</h2>
 <div id="sroificstes" class="block_center table gallery">			
 	<div class="table_row">
 		<div class="table_cell">
-			<a href="/public/images/sertificates/sro/sro_01.jpg" title="Свидетельство СРО">
-				<img src="/public/images/sertificates/sro/sro_01_min.jpg" alt="Свидетельство СРО">
-			</a>
+				<img src="/public/images/sertificates/mind_logo_black.png" alt="Сертификат Mind">
+            <br/><br/>
+                <div>Майнд – это российский программный сервер видеоконференц- связи, аналогичный по возможностям профессиональным аппаратным комплексам ВКС.</div>
 		</div>		
 		<div class="table_cell">		
-			<a href="/public/images/sertificates/sro/sro_02.jpg" title="Свидетельство СРО">
-				<img src="/public/images/sertificates/sro/sro_02_min.jpg" alt="Свидетельство СРО">
+			<a href="/public/images/sertificates/sert_mind.png.jpg" title="Сертификат Mind">
+				<img src="/public/images/sertificates/sert_mind_min.png" alt="Сертификат Mind">
 			</a>		
-		</div>	
-		<div class="table_cell">	
-			<a href="/public/images/sertificates/sro/sro_03.jpg" title="Свидетельство СРО">
-				<img src="/public/images/sertificates/sro/sro_03_min.jpg" alt="Свидетельство СРО">
-			</a>
-		</div>	
-	</div>		
-	<div class="table_row">	
-		<div class="table_cell">
-			<a href="/public/images/sertificates/sro/sro_04.jpg" title="Свидетельство СРО">
-				<img src="/public/images/sertificates/sro/sro_04_min.jpg" alt="Свидетельство СРО">
-			</a>
-		</div>
-		<div class="table_cell">
-			<a href="/public/images/sertificates/sro/sro_05.jpg" title="Свидетельство СРО">
-				<img src="/public/images/sertificates/sro/sro_05_min.jpg" alt="Свидетельство СРО">
-			</a>
-		</div>
-		<div class="table_cell">
-			<a href="/public/images/sertificates/sro/sro_06.jpg" title="Свидетельство СРО">
-				<img src="/public/images/sertificates/sro/sro_06_min.jpg" alt="Свидетельство СРО">
-			</a>
-		</div>
-	</div>	
-
-	<div class="table_row">	
-		<div class="table_cell">
-			<a href="/public/images/sertificates/sro/sro_07.jpg" title="Свидетельство СРО">
-				<img src="/public/images/sertificates/sro/sro_07_min.jpg" alt="Свидетельство СРО">
-			</a>
-		</div>
-		<div class="table_cell">
-			<a href="/public/images/sertificates/sro/sro_08.jpg" title="Свидетельство СРО">
-				<img src="/public/images/sertificates/sro/sro_08_min.jpg" alt="Свидетельство СРО">
-			</a>
-		</div>
-		<div class="table_cell">
-			<a href="/public/images/sertificates/sro/sro_09.jpg" title="Свидетельство СРО">
-				<img src="/public/images/sertificates/sro/sro_09_min.jpg" alt="Свидетельство СРО">
-			</a>
-		</div>
-	</div>	
-	
-	<div class="table_row">	
-		<div class="table_cell">
-			<a href="/public/images/sertificates/sro/sro_10.jpg" title="Свидетельство СРО">
-				<img src="/public/images/sertificates/sro/sro_10_min.jpg" alt="Свидетельство СРО">
-			</a>
-		</div>
-		<div class="table_cell">
-			<a href="/public/images/sertificates/sro/sro_11.jpg" title="Свидетельство СРО">
-				<img src="/public/images/sertificates/sro/sro_11_min.jpg" alt="Свидетельство СРО">
-			</a>
-		</div>
-		<div class="table_cell">
-			
-		</div>
-	</div>	
-	
-</div>
-
-<h2>Сертификаты соответствия и разрешения</h2>
-<div id="sertificstes" class="block_center table gallery">			
-	<div class="table_row">
-		<div class="table_cell">
-			<a href="/public/images/sertificates/sert_01.jpg" title="Сертификат соответствия">
-				<img src="/public/images/sertificates/sert_01_min.jpg" alt="Сертификат соответствия">
-			</a>
-		</div>		
-		<div class="table_cell">		
-			<a href="/public/images/sertificates/sert_02.jpg" title="Приложение №1">
-				<img src="/public/images/sertificates/sert_02_min.jpg" alt="Приложение №1">
-			</a>		
-		</div>	
-		<div class="table_cell">	
-			<a href="/public/images/sertificates/sert_03.jpg" title="Разрешение">
-				<img src="/public/images/sertificates/sert_03_min.jpg" alt="Разрешение">
-			</a>
-		</div>	
-	</div>		
-	<div class="table_row">	
-		<div class="table_cell">
-			<a href="/public/images/sertificates/sert_04.jpg" title="Сертификат соответствия">
-				<img src="/public/images/sertificates/sert_04_min.jpg" alt="Сертификат соответствия">
-			</a>
-		</div>
-		<div class="table_cell">
-			<a href="/public/images/sertificates/sert_05.jpg" title="Сертификат соответствия">
-				<img src="/public/images/sertificates/sert_05_min.jpg" alt="Сертификат соответствия">
-			</a>
-		</div>
-		<div class="table_cell">
-			<a href="/public/images/sertificates/sert_06.jpg" title="Сертификат соответствия">
-				<img src="/public/images/sertificates/sert_06_min.jpg" alt="Сертификат соответствия">
-			</a>
 		</div>
 	</div>
 
-	<div class="table_row">	
-		<div class="table_cell">
-			<a href="/public/images/sertificates/sert_07.jpg" title="Сертификат соответствия">
-				<img src="/public/images/sertificates/sert_07_min.jpg" alt="Сертификат соответствия">
-			</a>
-		</div>
-		<div class="table_cell">
-			<a href="/public/images/sertificates/sert_08.jpg" title="Сертификат соответствия">
-				<img src="/public/images/sertificates/sert_08_min.jpg" alt="Сертификат соответствия">
-			</a>
-		</div>
-		<div class="table_cell">
-			
-		</div>
-	</div>	
+    <div class="table_row">
+        <div class="table_cell">
+            <img src="/public/images/sertificates/sert-r7_logo.jpg" alt="Сертификат Р7">
+            <br/>
+            <div>Р7-Офис - российская экосистема офисных приложений.</div>
+        </div>
+        <div class="table_cell">
+            <a href="/public/images/sertificates/sert-r7.JPG" title="Сертификат Р7">
+                <img src="/public/images/sertificates/sert-r7_min.jpg" alt="Сертификат Р7">
+            </a>
+        </div>
+    </div>
+
+    <div class="table_row">
+        <div class="table_cell">
+            <img src="/public/images/sertificates/sert-astra_logo.jpg" alt="Сертификат Astra Linux">
+            <br/><br/>
+            <div>Astra Linux Special Edition / Common Edition — сертифицированная ОС со встроенными верифицированными средствами защиты информации. Это отказоустойчивая платформа для защищенных IT-инфраструктур любого масштаба и работы с данными любой степени конфиденциальности..</div>
+        </div>
+        <div class="table_cell">
+            <a href="/public/images/sertificates/sert-astra.JPG" title="Сертификат Astra Linux">
+                <img src="/public/images/sertificates/sert-astra_min.jpg" alt="Сертификат Astra Linux">
+            </a>
+        </div>
+    </div>
+
+	
 </div>
 
-<h2>Лицензия МЧС</h2>
-<div id="mcs_license" class="block_center table gallery">
-	<div class="table_row">
-		<div class="table_cell">
-			<a href="/public/images/sertificates/mcs/mcs-01.jpg" title="Лицензия МЧС Сторона 1">
-				<img src="/public/images/sertificates/mcs/mcs-01_min.jpg" alt="Лицензия МЦС Сторона 1">
-			</a>
-		</div>
-		<div class="table_cell">
-			<a href="/public/images/sertificates/mcs/mcs-02.jpg" title="Лицензия МЧС Сторона 2">
-				<img src="/public/images/sertificates/mcs/mcs-02_min.jpg" alt="Лицензия МЦС Сторона 2">
-			</a>
-		</div>
-	</div>
-</div>
+
 
