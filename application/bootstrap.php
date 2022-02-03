@@ -105,7 +105,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  */
 Kohana::init(array(
 	'base_url'   => '/',
-    'index_file' => FALSE
+    'index_file' => FALSE,
 ));
 
 /**
@@ -155,7 +155,7 @@ Route::set('yslugi', 'elektromontazh-yslugi(/<name_article>)')
 		'action'     => 'yslugi',
 	));	
 
-Route::set('licens', 'licenzii-na-electro-yslugi')
+Route::set('licens', '/licens-ooo-progress')
 	->defaults(array(
 		'controller' => 'Common',
 		'action'     => 'licens',
@@ -171,7 +171,7 @@ Route::set('kontakty', 'kontakty-ooo-progress')
 	->defaults(array(
 		'controller' => 'Common',
 		'action'     => 'kontakty',
-	));		
+	));
 
  Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
