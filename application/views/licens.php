@@ -20,7 +20,7 @@
                 <div>Майнд – это российский программный сервер видеоконференц- связи, аналогичный по возможностям профессиональным аппаратным комплексам ВКС.</div>
 		</div>		
 		<div class="table_cell">		
-			<a href="/public/images/sertificates/sert_mind.png.jpg" title="Сертификат Mind">
+			<a href="/public/images/sertificates/sert_mind.png" title="Сертификат Mind">
 				<img src="/public/images/sertificates/sert_mind_min.png" alt="Сертификат Mind">
 			</a>		
 		</div>
