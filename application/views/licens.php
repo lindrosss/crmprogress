@@ -12,7 +12,7 @@
 <h1>Сертификаты</h1>
 <br/>
 
-<div id="sroificstes" class="block_center table gallery">			
+<div id="sertificstes" class="block_center table gallery">
 	<div class="table_row">
 		<div class="table_cell">
 				<img src="/public/images/sertificates/mind_logo_black.png" alt="Сертификат Mind">
