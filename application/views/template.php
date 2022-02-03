@@ -23,8 +23,8 @@
 						break;
 					
 					case 'licens':
-						echo '<title>Лицензии компании на услуги по монтажу электрических сетей</title>';
-						echo '<meta content="Лицензии компании на услуги по монтажу электрических сетей" name="description">';
+						echo '<title>Сертификаты</title>';
+						echo '<meta content="Сертификаты" name="description">';
 						break;
 						
 					case 'rekvizity':
@@ -33,8 +33,8 @@
 						break;	
 							
 					case 'kontakty':
-						echo '<title>Контакты компании ООО "СЭМ" Строй инжиниринг</title>';
-						echo '<meta content="Контакты компании ООО "СЭМ" Строй инжиниринг" name="description">';
+						echo '<title>Контакты ООО "Прогресс"</title>';
+						echo '<meta content="Контакты ООО "Прогресс" " name="description">';
 						break;		
 				}
 			?>
@@ -75,7 +75,7 @@
 					</li>
 
                     <li <?php if(Request::current()->action()=='licens') echo 'class="active"'?>>
-                        <a href="/licens-ooo-progress">Лицензии</a>
+                        <a href="/licens-ooo-progress">Сертификаты</a>
                     </li>
 					
 					
