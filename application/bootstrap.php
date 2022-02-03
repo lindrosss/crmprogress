@@ -155,7 +155,7 @@ Route::set('yslugi', 'elektromontazh-yslugi(/<name_article>)')
 		'action'     => 'yslugi',
 	));	
 
-Route::set('licens', '/licens-ooo-progress')
+Route::set('licens', 'licens-ooo-progress')
 	->defaults(array(
 		'controller' => 'Common',
 		'action'     => 'licens',
