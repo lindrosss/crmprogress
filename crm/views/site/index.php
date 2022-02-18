@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'FreshMarket';
+$this->title = 'CRM ООО "Прогресс';
 use yii\helpers\Url;
 ?>
 <div class="site-index">
@@ -57,7 +57,9 @@ use yii\helpers\Url;
 						</div>
 						
 						<div class="col-lg-4">
-							
+                            <h2>Задачи</h2>
+                            <p>Список задач</p>
+                            <p><a class="btn btn-lg btn-success" href="<?php echo Url::to(['/tasks']);?>">Перейти</a></p>
 						</div>
 					
 			
