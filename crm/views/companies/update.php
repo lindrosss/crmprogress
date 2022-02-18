@@ -6,6 +6,8 @@ use yii\helpers\Url;
 use yii\bootstrap\Modal;
 
 use app\models\Contacts;
+use app\models\Projects;
+use app\models\Tasks;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Companies */
@@ -19,14 +21,17 @@ $this->params['breadcrumbs'][] = 'Редактирование';
 
     <h1><?= Html::encode($this->title) ?></h1>
 
+    <?php
+        $model_company = $model;
+        $id_company = $model->id;
+    ?>
+
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
 	
 	<br/><br/>
-	
-	<h2>Контакты</h2>	
-	
+	<h2>Контакты</h2>
 	<?php	Modal::begin([ 
 				'header' => '<h2>Создать Контакт</h2>',
 				'toggleButton' => ['label' => 'Создать контакт', 'class'=>'btn btn-success'],
@@ -47,8 +52,6 @@ $this->params['breadcrumbs'][] = 'Редактирование';
 			
 			Modal::end();
 	?>
-	
-	
 	
 	<?= GridView::widget([
         'dataProvider' => $dataProviderContacts,
@@ -84,6 +87,101 @@ $this->params['breadcrumbs'][] = 'Редактирование';
 
            // ['class' => 'yii\grid\ActionColumn'],
 		   
+        ],
+    ]); ?>
+
+
+    <br/><br/>
+    <h2>Проекты</h2>
+    <?php	Modal::begin([
+        'header' => '<h2>Создать Проект</h2>',
+        'toggleButton' => ['label' => 'Создать проект', 'class'=>'btn btn-success'],
+        'closeButton' => ['id' => 'close-button'],
+        'options' => [
+            'id' => 'create_project',
+            'tabindex' => false // important for Select2 to work properly
+        ],
+    ]);
+
+        $model = new Projects();
+        //$get = Yii::$app->request->get();
+        $model->id_company = $get['id'];
+        echo \Yii::$app->view->renderFile('@app/views/projects/_form.php', [
+            'model' => $model,
+            'form_begin' => ['action'=>'/softprog.ru/crm/projects/create_without_redirect'],
+        ]);
+
+    Modal::end();
+    ?>
+
+    <?= GridView::widget([
+        'dataProvider' => $dataProviderProjects,
+        'filterModel' => $searchModelProjects,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'name',
+            'cost',
+          //  'stage',
+
+            [
+                'format' => 'raw',
+                'attribute' => 'stage',
+                'value' => function($data)  {
+                    return Projects::getStage($data->stage);
+                }
+            ],
+
+            [
+                'format' => 'raw',
+                'attribute' => 'source',
+                'value' => function($data)  {
+                    return Projects::getSource($data->source);
+                }
+            ],
+
+            [
+                'label' => 'История',
+                'attribute' => 'tasksname',
+            ],
+
+            [
+                'label' => 'Создать задачу',
+                'format' => 'raw',
+                'value' => function($data) use($model_company) {
+                    return \Yii::$app->view->renderFile('@app/views/tasks/create_modal.php', [
+                        'model_company' => $model_company,
+                        //'form_begin' => ['action'=>'/softprog.ru/crm/tasks/create_without_redirect',],
+                        'id_project' => $data->id
+                    ]);
+                }
+            ],
+
+            //'source',
+            [
+                'label' => 'Действия',
+                'format' => 'raw',
+                'value' => function($data) {
+                    $str ='';
+                    $str .= Html::a('<span class="glyphicon glyphicon-pencil"></span>',
+                            Url::to(['projects/update', 'id'=>$data->id],[]),
+                            [
+                                'title' => 'Редактировать проект',
+                                'aria-label' => 'Редактировать проект',
+                                'target' => 'blank',
+                                'data-method' => 'post',
+                            ]
+                        ).'&nbsp&nbsp';
+
+                    return $str;
+                }
+            ]
+            //'address:ntext',
+            //'comment:ntext',
+            //'date_create',
+
+            // ['class' => 'yii\grid\ActionColumn'],
+
         ],
     ]); ?>
 	

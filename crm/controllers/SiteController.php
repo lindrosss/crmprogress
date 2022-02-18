@@ -70,19 +70,27 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionLogin()
+    public function actionAuth()
     {
         if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
+           // return $this->goHome();
+            $get = Yii::$app->request->get();
+
+            return $this->render('index', ['get' => $get,]);
         }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            //return $this->goBack();
+            //return $this->goHome();
+            $get = Yii::$app->request->get();
+            return $this->render('index', ['get' => $get,]);
         }
+
         return $this->render('login', [
             'model' => $model,
         ]);
+
     }
 
     /**
@@ -90,11 +98,13 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionLogout()
+    public function actionAuthout()
     {
         Yii::$app->user->logout();
 
-        return $this->goHome();
+        //return $this->goHome();
+        $get = Yii::$app->request->get();
+        return $this->render('index', ['get' => $get,]);
     }
 
     /**

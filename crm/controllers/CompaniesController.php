@@ -7,6 +7,8 @@ use app\models\Companies;
 use app\models\CompaniesSearch;
 use app\models\ContactsSearch;
 use app\models\Contacts;
+use app\models\Projects;
+use app\models\ProjectsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -104,6 +106,9 @@ class CompaniesController extends Controller
 		/**/
 		$searchModelContacts = new ContactsSearch();
         $dataProviderContacts = $searchModelContacts->search(Yii::$app->request->queryParams, $id );
+
+        $searchModelProjects = new ProjectsSearch();
+        $dataProviderProjects = $searchModelProjects->search(Yii::$app->request->queryParams, $id );
        
 		/**/
 
@@ -111,6 +116,9 @@ class CompaniesController extends Controller
             'model' => $model,			
 			'searchModelContacts' => $searchModelContacts,
             'dataProviderContacts' => $dataProviderContacts,
+
+            'searchModelProjects' => $searchModelProjects,
+            'dataProviderProjects' => $dataProviderProjects,
         ]);
     }
 

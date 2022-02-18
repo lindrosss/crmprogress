@@ -46,7 +46,7 @@ AppAsset::register($this);
                 ['label' => 'Войти', 'url' => ['/site/login']]
             ) : (
                 '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
+                . Html::beginForm(['/site/authout'], 'post')
                 . Html::submitButton(
                     'Выйти (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link logout']
@@ -78,10 +78,10 @@ AppAsset::register($this);
 		$items = [
             ['label' => 'Главная', 'url' => ['/']],				
             Yii::$app->user->isGuest ? (
-                ['label' => 'Войти', 'url' => ['/site/login']]
+                ['label' => 'Войти', 'url' => ['/site/auth']]
             ) : (
                 '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
+                . Html::beginForm(['/site/authout'], 'post')
                 . Html::submitButton(
                     'Выйти (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link logout']
