@@ -47,7 +47,9 @@ $this->params['breadcrumbs'][] = 'Редактирование';
 			$model->id_company = $get['id'];
 			echo \Yii::$app->view->renderFile('@app/views/contacts/_form.php', [
 				'model' => $model,		
-				'form_begin' => ['action'=>'/contacts/create_without_redirect'],					
+				//'form_begin' => ['action'=>'/contacts/create_without_redirect'],
+                'form_begin' => ['action'=>Url::base().'/contacts/create_without_redirect'],
+
 			]);
 			
 			Modal::end();
@@ -108,7 +110,8 @@ $this->params['breadcrumbs'][] = 'Редактирование';
         $model->id_company = $get['id'];
         echo \Yii::$app->view->renderFile('@app/views/projects/_form.php', [
             'model' => $model,
-            'form_begin' => ['action'=>'/softprog.ru/crm/projects/create_without_redirect'],
+            //'form_begin' => ['action'=>'/softprog.ru/crm/projects/create_without_redirect'],
+            'form_begin' => ['action'=>Url::base().'/projects/create_without_redirect'],
         ]);
 
     Modal::end();
