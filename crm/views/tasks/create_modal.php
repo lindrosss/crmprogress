@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use app\models\Tasks;
 use yii\bootstrap\Modal;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Tasks */
@@ -26,7 +27,7 @@ Modal::begin([
         'model' => $model,
         'id_company' => $model_company->id,
         'id_project' => $id_project,
-        'form_begin' => ['action'=>'/softprog.ru/crm/tasks/create_without_redirect'],
+        'form_begin' => ['action'=>Url::base().'/tasks/create_without_redirect'],
     ]);
 
 Modal::end();

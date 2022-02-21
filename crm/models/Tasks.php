@@ -32,11 +32,11 @@ class Tasks extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_project', 'name', 'date_task'], 'required'],
+            [['id_project', 'name'], 'required'],
             [['id_project'], 'integer'],
-            [['date_task', 'date_create'], 'safe'],
+            [['name', 'date_task', 'date_create'], 'safe'],
             [['comment'], 'string'],
-            [['name'], 'string', 'max' => 50],
+
         ];
     }
 
@@ -48,7 +48,7 @@ class Tasks extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'id_project' => 'Id Project',
-            'name' => 'Название',
+            'name' => 'Текст',
             'date_task' => 'Дата задачи',
             'comment' => 'Комментарий',
             'date_create' => 'Date Create',
