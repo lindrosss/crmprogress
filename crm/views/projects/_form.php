@@ -25,7 +25,7 @@ use app\models\Projects;
 
     <?= $form->field($model, 'cost')->textInput() ?>
 
-    <?= $form->field($model, 'source')->textInput() ?>
+    
 
     <?php
     $items = Projects::$sourcesCodes;
