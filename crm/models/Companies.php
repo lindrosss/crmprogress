@@ -14,6 +14,7 @@ use app\models\Contacts;
  * @property string $kpp
  * @property string $address
  * @property string $comment
+ * @property int $responsible_usr
  * @property string $date_create
  * @property string $contactsname
  */
@@ -35,6 +36,7 @@ class Companies extends \yii\db\ActiveRecord
         return [
             [['name'], 'required'],
             [['address', 'comment'], 'string'],
+            [['responsible_usr'], 'integer'],
             [['date_create'], 'safe'],
             [['name'], 'string', 'max' => 300],
             [['inn', 'kpp'], 'string', 'max' => 50],
@@ -54,6 +56,7 @@ class Companies extends \yii\db\ActiveRecord
             'kpp' => 'КПП',
             'address' => 'Адрес',
             'comment' => 'Комментарий',
+            'responsible_usr' => 'Ответственный',
             'date_create' => 'Date Create',
         ];
     }
@@ -81,5 +84,36 @@ class Companies extends \yii\db\ActiveRecord
             return 'empty';
         }
         return $contact;
+    }
+
+    public function getProjects()
+    {
+        return $this->hasMany(Projects::className(), ['id_company' => 'id']);
+    }
+
+    public function getCompany_projects()
+    {
+        $arr = $this->projects;
+        $return = [];
+        if($arr) {
+            foreach ($arr as $item) {
+                $return[] = $item;
+            }
+        }
+
+        return $return;
+    }
+
+    public function getCompany_contacts()
+    {
+        $arr = $this->contacts;
+        $return = [];
+        if($arr) {
+            foreach ($arr as $item) {
+                $return[] = $item;
+            }
+        }
+
+        return $return;
     }
 }
