@@ -10,6 +10,7 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
     public $authKey;
     public $accessToken;
 	public $role;
+	public $username_ru;
 	
 	/*
 		role = 1 - oprator
