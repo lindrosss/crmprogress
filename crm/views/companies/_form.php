@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use vova07\imperavi\Widget;
+use app\models\User;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Companies */
@@ -20,6 +21,14 @@ use vova07\imperavi\Widget;
     <?= $form->field($model, 'kpp')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'address')->textarea(['rows' => 6]) ?>
+
+    <?php
+        $items = User::getUsersByRole(2);
+        $params = [
+            'prompt' => 'Укажите ответственного сотрудника'
+        ];
+        echo $form->field($model, 'responsible_usr')->dropDownList($items,$params);
+    ?>
 
   
 	

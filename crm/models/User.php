@@ -21,21 +21,7 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
 	*/
 
     private static $users = [
-        '100' => [
-            'id' => '100',
-            'username' => 'admin',
-            'password' => 'admin',
-            'authKey' => 'test100key',
-            'accessToken' => '100-token',
-        ],
-        '101' => [
-            'id' => '101',
-            'username' => 'demo',
-            'password' => 'demo',
-            'authKey' => 'test101key',
-            'accessToken' => '101-token',
-        ],
-		
+
 		'102' => [
             'id' => '102',
             'username' => 'lind',
@@ -51,7 +37,18 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
             'password' => '12345678',
             'authKey' => 'test123key',
             'accessToken' => '123-token',
+            'username_ru' => 'Чернякова Ирина',
 			'role' => '2',
+        ],
+
+        '104' => [
+            'id' => '104',
+            'username' => 'e.kokurkina',
+            'password' => 'Xu7x3Xde',
+            'authKey' => 'test104key',
+            'accessToken' => '104-token',
+            'username_ru' => 'Кокуркина Елена',
+            'role' => '2',
         ],
 		
 		
@@ -132,5 +129,18 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
     public function validatePassword($password)
     {
         return $this->password === $password;
+    }
+
+    public static function getUsersByRole($role){
+        $arr = [];
+
+        foreach (self::$users as $user) {
+            if ($user['role'] == $role && $user['username'] != 'lind') {
+                //$arr[] = ['id'=>$user['id'], 'name'=>$user['username_ru']];
+                $arr[$user['id']] = $user['username_ru'];
+            }
+        }
+
+        return $arr;
     }
 }
