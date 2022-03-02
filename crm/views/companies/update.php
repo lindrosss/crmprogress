@@ -146,6 +146,8 @@ $this->params['breadcrumbs'][] = 'Редактирование';
                 'attribute' => 'tasksname',
             ],
 
+            'comment:ntext',
+
             [
                 'label' => 'Создать задачу',
                 'format' => 'raw',
@@ -178,7 +180,7 @@ $this->params['breadcrumbs'][] = 'Редактирование';
                 }
             ]
             //'address:ntext',
-            //'comment:ntext',
+
             //'date_create',
 
             // ['class' => 'yii\grid\ActionColumn'],
