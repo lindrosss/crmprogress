@@ -32,7 +32,7 @@
 			</div>
 			
 			<div class="table_cell">
-				<span class="contact_phone">+7(831) 423 92 10</span>
+				<span class="contact_phone">+7 (831) 423-92-10</span>
 			</div>
 
 		</div>

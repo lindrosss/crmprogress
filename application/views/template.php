@@ -59,7 +59,7 @@
 			<div id="head_contact" class="table_cell">				
 				<!-- <p>Нижний Новгород, ул.Октябрьская, 35</p> -->
 				<p>Email: info@softprog.ru</p>
-                <p>Телефон: +7(831) 423 92 10</p>
+                <p>Телефон: +7 (831) 423-92-10</p>
 			</div>
 			</div>
 			
