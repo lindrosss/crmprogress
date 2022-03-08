@@ -28,31 +28,15 @@
 		
 		<div class="table_row">
 			<div class="table_cell">
-				<span class="contact_dolzh">ИНН</span>
+				<span class="contact_dolzh"></span>
 			</div>
 			
 			<div class="table_cell">
-				<span class="contact_phone">5262383783</span>
+				<span class="contact_phone">+7(831) 423 92 10</span>
 			</div>
-			
-			<!-- <div class="table_cell">
-				<span class="contact_name">Александров Сергей Владимирович</span>
-			</div> -->
+
 		</div>
-		
-		<div class="table_row">
-			<div class="table_cell">
-				<span class="contact_dolzh">КПП</span>
-			</div>
-			
-			<div class="table_cell">
-				<span class="contact_phone">526201001</span>
-			</div>
-			
-			<!-- <div class="table_cell">
-				<span class="contact_name">Александров Сергей Владимирович</span>
-			</div> -->
-		</div>
+
 		
 		
 		
