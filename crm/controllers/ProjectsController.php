@@ -8,6 +8,7 @@ use app\models\ProjectsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * ProjectsController implements the CRUD actions for Projects model.
@@ -24,6 +25,34 @@ class ProjectsController extends Controller
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
+                ],
+            ],
+
+            'access' => [
+                'class' => AccessControl::class,
+                // 'only' => ['login', 'logout', 'signup'],
+                'denyCallback' => function () {
+                    die('Доступ запрещен!');
+                },
+
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['login', 'signup'],
+                        'roles' => ['?'],
+                    ],
+
+                    [
+                        'allow' => false,
+                        'actions' => ['index', 'update', 'view'],
+                        'roles' => ['?'],
+                    ],
+
+                    [
+                        'allow' => true,
+                        //'actions' => ['logout', 'index', /*'update'*/],
+                        'roles' => ['@'],
+                    ],
                 ],
             ],
         ];

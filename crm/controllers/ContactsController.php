@@ -8,6 +8,7 @@ use app\models\ContactsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * ContactsController implements the CRUD actions for Contacts model.
@@ -26,6 +27,35 @@ class ContactsController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+
+            'access' => [
+                'class' => AccessControl::class,
+                // 'only' => ['login', 'logout', 'signup'],
+                'denyCallback' => function () {
+                    die('Доступ запрещен!');
+                },
+
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['login', 'signup'],
+                        'roles' => ['?'],
+                    ],
+
+                    [
+                        'allow' => false,
+                        'actions' => ['index', 'update', 'view', 'update_without_redirect'],
+                        'roles' => ['?'],
+                    ],
+
+                    [
+                        'allow' => true,
+                        //'actions' => ['logout', 'index', /*'update'*/],
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+
         ];
     }
 
@@ -84,7 +114,11 @@ class ContactsController extends Controller
 		$model = new Contacts();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['/companies/update', 'id' => $model->id_company]);
+            //return $this->redirect(['/companies/update', 'id' => $model->id_company]);
+            //return var_dump(Yii::$app->request->post());
+            return 'ok';
+        }else{
+            return var_dump(Yii::$app->request->post());
         }
 	}
 
