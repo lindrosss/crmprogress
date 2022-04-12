@@ -51,6 +51,16 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
             'username_ru' => 'Кокуркина Елена',
             'role' => '2',
         ],
+
+        '105' => [
+            'id' => '105',
+            'username' => 'd.kudinov',
+            'password' => 'Xp8Uycsepm',
+            'authKey' => 'test105key',
+            'accessToken' => '105-token',
+            'username_ru' => 'Кудинов Дмитрий',
+            'role' => '2',
+        ],
 		
 		
 
