@@ -38,7 +38,7 @@ class TasksSearch extends Tasks
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
+    public function search($params, $user_id = null)
     {
         $query = Tasks::find();
 
@@ -67,6 +67,12 @@ class TasksSearch extends Tasks
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'comment', $this->comment]);
+
+        if($user_id){
+            $query->leftJoin('projects', 'projects.id = tasks.id_project');
+            $query->leftJoin('companies', 'companies.id = projects.id_company');
+            $query->andFilterWhere(['companies.responsible_usr' => $user_id,]);
+        }
 
         return $dataProvider;
     }

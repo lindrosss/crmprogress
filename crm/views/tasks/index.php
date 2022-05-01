@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\TasksSearch */
@@ -9,6 +10,8 @@ use yii\grid\GridView;
 
 $this->title = 'Задачи';
 $this->params['breadcrumbs'][] = $this->title;
+
+$this->registerCssFile(Url::to(['web/css/tasks/view.css?v=1']));
 ?>
 <div class="tasks-index">
 
@@ -26,7 +29,23 @@ $this->params['breadcrumbs'][] = $this->title;
            // 'id',
            // 'id_project',
             'name',
-            'date_task',
+          //  'date_task',
+            [
+                'label' => 'Дата задачи',
+                'format' => 'raw',
+                'attribute' => 'date_task',
+                'value' => function($data) {
+                    if($data->date_task) {
+                        if(strtotime(date('Y-m-d H:i:s')) > strtotime($data->date_task)) {
+                            return '<span class="red">'.date('d-m-Y', strtotime($data->date_task)).'</span>';
+                        }else{
+                            return '<span class="">'.date('d-m-Y', strtotime($data->date_task)).'</span>';
+                        }
+                    }else{
+                        return '';
+                    }
+                }
+            ],
             [
                 'label' => 'Компания, проект',
                 'attribute' => 'companyproject',

@@ -36,7 +36,7 @@ class TasksController extends Controller
     public function actionIndex()
     {
         $searchModel = new TasksSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams, Yii::$app->user->identity->id);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -80,14 +80,10 @@ class TasksController extends Controller
         $model = new Tasks();
 
         $post = Yii::$app->request->post();
-
-           // echo var_dump($post);
-            //return;
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['/companies/update', 'id' => $post['id_company']]);
+            return 'ok';
         }else{
-            return 'error '.serialize($model->errors);
+            return var_dump(Yii::$app->request->post());
         }
     }
 
@@ -109,6 +105,33 @@ class TasksController extends Controller
         return $this->render('update', [
             'model' => $model,
         ]);
+    }
+
+    /*Обновление поля Задачи*/
+    public function actionUpdate_field()
+    {
+        $post = Yii::$app->request->post();
+        if(isset($post['id']) && isset($post['field_name'])&& isset($post['value']) ){
+            $model = $this->findModel($post['id']);
+            if($model){
+                $field_name = $post['field_name'];
+                //return var_dump($post['field_name']);
+                if(isset($model->$field_name) ) {
+                    $model->$field_name = $post['value'];
+                    if ($model->save()){
+                        return 'ok';
+                    }else{
+                        return 'Ошибка. Не удалось сохранить Задачу '.serialize($model->errors);
+                    }
+                }else{
+                    return 'Ошибка. Поле Задачи не найдено';
+                }
+            }else{
+                return 'Ошибка. Не найдена Задача';
+            }
+        }else{
+            return 'Ошибка. Не указаны параметры';
+        }
     }
 
     /**
