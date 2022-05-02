@@ -1,6 +1,7 @@
 <?php
 
 namespace app\models;
+use Yii;
 
 class User extends \yii\base\Object implements \yii\web\IdentityInterface
 {
@@ -61,9 +62,6 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
             'username_ru' => 'Кудинов Дмитрий',
             'role' => '2',
         ],
-		
-		
-
 
     ];
 
@@ -100,6 +98,17 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
     {
         foreach (self::$users as $user) {
             if (strcasecmp($user['username'], $username) === 0) {
+                return new static($user);
+            }
+        }
+
+        return null;
+    }
+
+    public static function findByUserid($userid)
+    {
+        foreach (self::$users as $user) {
+            if (strcasecmp($user['id'], $userid) === 0) {
                 return new static($user);
             }
         }
@@ -154,4 +163,25 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
 
         return $arr;
     }
+
+    public static function getUsersArray(){
+
+        foreach (self::$users as $user) {
+            if(isset($user['username_ru'])) {
+                $arr[$user['id']] = $user['username_ru'];
+            }
+        }
+
+        return $arr;
+    }
+
+    public static function getUserNameById($id){
+        $user = self::findByUserid($id);
+        if($user){
+            return $user->username_ru;
+        }else{
+            return 'Не найден';
+        }
+    }
+
 }

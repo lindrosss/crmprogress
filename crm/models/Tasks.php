@@ -5,6 +5,7 @@ namespace app\models;
 use Yii;
 use app\models\Companies;
 use app\models\Projects;
+use app\models\User;
 
 /**
  * This is the model class for table "tasks".
@@ -15,9 +16,11 @@ use app\models\Projects;
  * @property string $date_task
  * @property string $comment
  * @property string $date_create
+ * @property int $responsible_usr
  */
 class Tasks extends \yii\db\ActiveRecord
 {
+    public $responsible_usr;
     /**
      * {@inheritdoc}
      */
@@ -55,6 +58,10 @@ class Tasks extends \yii\db\ActiveRecord
         ];
     }
 
+    public function afterFind() {
+        $this->responsible_usr = $this->getResponsibleusr();
+    }
+
     public function getProject()
     {
         return $this->hasOne(Projects::className(), ['id' => 'id_project']);
@@ -68,8 +75,30 @@ class Tasks extends \yii\db\ActiveRecord
     public function getCompanyproject() {
         $project = $this->project;
         $company = $project->company;
-       // return $project->name;
 
         return $company->name.', '.$project->name;
+    }
+
+    public function getResponsibleusr() {
+        $project = $this->project;
+
+        if(isset($project->company)) {
+            $company = $project->company;
+            //$id_responsible_usr = $company->responsible_usr;
+            if ($company){
+                $user = User::findByUserid($company->responsible_usr);
+                if (isset($user->id)) {
+                    return $user->id;
+                } else {
+                    //return 'Не указан '.$company->name;
+                    return $company->responsible_usr;
+                }
+            }else{return 2;}
+        }else{
+            return 'Не указан';
+        }
+
+        return 0;
+
     }
 }

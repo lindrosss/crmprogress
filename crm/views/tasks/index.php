@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\helpers\Url;
+use app\models\User;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\TasksSearch */
@@ -51,6 +52,18 @@ $this->registerCssFile(Url::to(['web/css/tasks/view.css?v=1']));
                 'attribute' => 'companyproject',
             ],
             'comment:ntext',
+
+            [
+                'label' => 'Ответственный',
+                'format' => 'raw',
+                'filter'=>User::getUsersArray(),
+                'attribute' => 'responsible_usr',
+                'value' => function($data) {
+                    //$str = '<select name="TasksSearch[responsible_usr]">';
+                   // return User::findByUserid($data->responsible_usr);
+                    return User::getUserNameById($data->responsible_usr);
+                }
+            ],
 
 
            // ['class' => 'yii\grid\ActionColumn'],
