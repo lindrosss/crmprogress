@@ -17,6 +17,8 @@ class TasksSearch extends Tasks
     public function rules()
     {
         return [
+            [['id', 'id_project','responsible_usr'], 'integer'],
+            //[['id', 'id_project','companies.responsible_usr'], 'integer'],
             [['id', 'id_project'], 'integer'],
             [['name', 'date_task', 'comment', 'date_create'], 'safe'],
         ];
@@ -63,15 +65,24 @@ class TasksSearch extends Tasks
             'id_project' => $this->id_project,
             'date_task' => $this->date_task,
             'date_create' => $this->date_create,
+            //'companies.responsible_usr' => $user_id,
+           // 'responsibleusr' => $user_id,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name])
+      /*  $query->andFilterWhere([
+
+            ]);*/
+
+        $query->andFilterWhere(['like', 'tasks.name', $this->name])
             ->andFilterWhere(['like', 'comment', $this->comment]);
 
+        $query->leftJoin('projects', 'projects.id = tasks.id_project');
+        $query->leftJoin('companies', 'companies.id = projects.id_company');
+
         if($user_id){
-            $query->leftJoin('projects', 'projects.id = tasks.id_project');
-            $query->leftJoin('companies', 'companies.id = projects.id_company');
-            $query->andFilterWhere(['companies.responsible_usr' => $user_id,]);
+            $query->andFilterWhere(['companies.responsible_usr' => $user_id]);
+        }else{
+            $query->andFilterWhere(['companies.responsible_usr' => $this->responsible_usr]);
         }
 
         return $dataProvider;

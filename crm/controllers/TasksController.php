@@ -36,7 +36,13 @@ class TasksController extends Controller
     public function actionIndex()
     {
         $searchModel = new TasksSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams, Yii::$app->user->identity->id);
+        $params = Yii::$app->request->queryParams;
+        if(isset($params['TasksSearch']['responsible_usr'])) {
+
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        }else{
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams, Yii::$app->user->identity->id);
+        }
 
         return $this->render('index', [
             'searchModel' => $searchModel,
