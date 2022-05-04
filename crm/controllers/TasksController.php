@@ -115,6 +115,10 @@ class TasksController extends Controller
             return $this->redirect(['index']);
         }
 
+        if($model->date_task){
+            $model->date_task = date('Y-m-d', strtotime($model->date_task));
+        }
+
         return $this->render('update', [
             'model' => $model,
         ]);
