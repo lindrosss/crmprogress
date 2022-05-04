@@ -128,7 +128,7 @@ class Projects extends \yii\db\ActiveRecord
                         ]
                     ).'&nbsp&nbsp'
                     //$item->name
-                    . ' ' . $date_task .$eol;
+                    . ' ' . $date_task .$eol.$eol;
             }
         }else{
             return 'Не указаны';
