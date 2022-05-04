@@ -5,6 +5,8 @@ namespace app\models;
 use Yii;
 use app\models\Tasks;
 use app\models\Companies;
+use yii\helpers\Url;
+use yii\helpers\Html;
 
 /**
  * This is the model class for table "projects".
@@ -110,12 +112,23 @@ class Projects extends \yii\db\ActiveRecord
     public function getTasksName() {
         $tasks = $this->tasks;
         $task = '';
-        $eol='
-        ';
+        $eol='<br/>';
 
         if(is_array($tasks)){
             foreach ($tasks as $item) {
-                $task .= $item->name . ' ' . $item->date_task.$eol.$eol;
+                $date_task = $item->date_task!=null ? ' ('.date('d-m-Y', strtotime($item->date_task)).')':'';
+                $task .=
+                    Html::a($item->name,
+                        Url::to(['tasks/update', 'id'=>$item['id']],[]),
+                        [
+                            'title' => 'Открыть Задачу',
+                            'aria-label' => 'Открыть Задачу',
+                            'target' => 'blanck',
+                            'data-method' => 'post',
+                        ]
+                    ).'&nbsp&nbsp'
+                    //$item->name
+                    . ' ' . $date_task .$eol;
             }
         }else{
             return 'Не указаны';

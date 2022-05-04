@@ -37,6 +37,12 @@ class TasksController extends Controller
     {
         $searchModel = new TasksSearch();
         $params = Yii::$app->request->queryParams;
+        if(isset($params['TasksSearch']['date_task'])) {
+            $date_task_search = $params['TasksSearch']['date_task'];
+        }else{
+            $date_task_search = '';
+        }
+
         if(isset($params['TasksSearch']['responsible_usr'])) {
 
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -47,6 +53,7 @@ class TasksController extends Controller
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'date_task_search' => $date_task_search,
         ]);
     }
 
@@ -105,7 +112,7 @@ class TasksController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         }
 
         return $this->render('update', [

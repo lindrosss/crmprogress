@@ -36,8 +36,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     $str .= Html::a($data->name,
                         Url::to(['update', 'id'=>$data->id],[]),
                         [
-                            'title' => 'Редактировать контакт',
-                            'aria-label' => 'Редактировать контакт',
+                            'title' => 'Редактировать компанию',
+                            'aria-label' => 'Редактировать компанию',
 							'target' => 'blanck',
                             'data-method' => 'post',
                         ]
@@ -45,8 +45,28 @@ $this->params['breadcrumbs'][] = $this->title;
 					
 					return $str;
 				}
-			],	
-          //  'name',
+			],
+
+            [
+                'label' => 'Название',
+                'format' => 'raw',
+                'attribute' => 'name',
+                'value' => function($data) {
+                    $str ='';
+                    $str .= Html::a($data->name.' new',
+                            Url::to(['viewcompany', 'id'=>$data->id],[]),
+                            [
+                                'title' => 'Открыть компанию',
+                                'aria-label' => 'Открыть компанию',
+                                'target' => 'blanck',
+                                'data-method' => 'post',
+                            ]
+                        ).'&nbsp&nbsp';
+
+                    return $str;
+                }
+            ],
+            //  'name',
             'inn',
             'kpp',
             'address:ntext',

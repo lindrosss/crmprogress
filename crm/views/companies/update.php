@@ -144,6 +144,7 @@ $this->params['breadcrumbs'][] = 'Редактирование';
             [
                 'label' => 'История',
                 'attribute' => 'tasksname',
+                'format' => 'raw',
             ],
 
             'comment:ntext',
