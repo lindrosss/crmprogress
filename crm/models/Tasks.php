@@ -21,6 +21,7 @@ use app\models\User;
 class Tasks extends \yii\db\ActiveRecord
 {
     public $responsible_usr;
+
     /**
      * {@inheritdoc}
      */
@@ -74,9 +75,24 @@ class Tasks extends \yii\db\ActiveRecord
 
     public function getCompanyproject() {
         $project = $this->project;
-        $company = $project->company;
+        if(isset($project->company)) {
+            $company = $project->company;
+            return $company->name . ', ' . $project->name;
+        }else{
+            return '';
+        }
+    }
 
-        return $company->name.', '.$project->name;
+    public function getCompanyid() {
+        $project = $this->project;
+        if(isset($project->company)) {
+            $company = $project->company;
+            return $company->id;
+        }else{
+            return '';
+        }
+
+
     }
 
     public function getResponsibleusr() {

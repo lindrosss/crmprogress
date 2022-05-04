@@ -63,7 +63,7 @@ class TasksSearch extends Tasks
         $query->andFilterWhere([
             'id' => $this->id,
             'id_project' => $this->id_project,
-            'date_task' => $this->date_task,
+            'DATE_FORMAT(date_task,"%Y-%m-%d")' => $this->date_task,
             'date_create' => $this->date_create,
             //'companies.responsible_usr' => $user_id,
            // 'responsibleusr' => $user_id,

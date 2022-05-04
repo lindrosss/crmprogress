@@ -25,15 +25,36 @@ $this->registerCssFile(Url::to(['web/css/tasks/view.css?v=1']));
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+           // ['class' => 'yii\grid\SerialColumn'],
 
            // 'id',
            // 'id_project',
-            'name',
+           // 'name',
+            [
+                'label' => 'Текст',
+                'format' => 'raw',
+                'attribute' => 'name',
+                'value' => function($data) {
+                    $str ='';
+                    $str .= Html::a($data->name,
+                            Url::to(['update', 'id'=>$data->id],[]),
+                            [
+                                'title' => 'Редактировать Задачу',
+                                'aria-label' => 'Редактировать Задачу',
+                                //'target' => 'blanck',
+                                'data-method' => 'post',
+                            ]
+                        ).'&nbsp&nbsp';
+
+                    return $str;
+                }
+            ],
           //  'date_task',
             [
                 'label' => 'Дата задачи',
+                //'format' => 'timestamp',
                 'format' => 'raw',
+                'filter'=> '<input type="date" name="TasksSearch[date_task]" value="'.$date_task_search.'">',
                 'attribute' => 'date_task',
                 'value' => function($data) {
                     if($data->date_task) {
@@ -47,10 +68,27 @@ $this->registerCssFile(Url::to(['web/css/tasks/view.css?v=1']));
                     }
                 }
             ],
+
             [
                 'label' => 'Компания, проект',
-                'attribute' => 'companyproject',
+                'format' => 'raw',
+                'attribute' => 'name',
+                'value' => function($data) {
+                    $str ='';
+                    $str .= Html::a($data->companyproject.' new',
+                            Url::to(['companies/update', 'id'=>$data['companyid']],[]),
+                            [
+                                'title' => 'Открыть компанию',
+                                'aria-label' => 'Открыть компанию',
+                                'target' => 'blanck',
+                                'data-method' => 'post',
+                            ]
+                        ).'&nbsp&nbsp';
+
+                    return $str;
+                }
             ],
+
             'comment:ntext',
 
             [
