@@ -47,6 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
 				}
 			],
 
+            /*
             [
                 'label' => 'Название',
                 'format' => 'raw',
@@ -65,7 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     return $str;
                 }
-            ],
+            ],*/
             //  'name',
             'inn',
             'kpp',
