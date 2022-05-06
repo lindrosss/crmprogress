@@ -5,6 +5,7 @@ namespace app\models;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\Tasks;
+use app\models\Projects;
 
 /**
  * TasksSearch represents the model behind the search form of `app\models\Tasks`.
@@ -78,6 +79,8 @@ class TasksSearch extends Tasks
 
         $query->leftJoin('projects', 'projects.id = tasks.id_project');
         $query->leftJoin('companies', 'companies.id = projects.id_company');
+
+        $query->andFilterWhere(['!=', 'projects.stage', Projects::$stageClose]);
 
         if($user_id){
             $query->andFilterWhere(['companies.responsible_usr' => $user_id]);

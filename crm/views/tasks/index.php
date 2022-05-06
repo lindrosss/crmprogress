@@ -89,7 +89,7 @@ $this->registerCssFile(Url::to(['web/css/tasks/view.css?v=1']));
                 }
             ],
 
-            'comment:ntext',
+            //'comment:ntext',
 
             [
                 'label' => 'Ответственный',
