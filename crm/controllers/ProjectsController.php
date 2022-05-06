@@ -109,9 +109,9 @@ class ProjectsController extends Controller
         $model = new Projects();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['/companies/update', 'id' => $model->id_company]);
+            return 'ok';
         }else{
-            return 'error '.serialize($model->errors);
+            return var_dump(Yii::$app->request->post());
         }
     }
 
@@ -133,6 +133,33 @@ class ProjectsController extends Controller
         return $this->render('update', [
             'model' => $model,
         ]);
+    }
+
+    /*Обновление поля Проекта*/
+    public function actionUpdate_field()
+    {
+        $post = Yii::$app->request->post();
+        if(isset($post['id']) && isset($post['field_name'])&& isset($post['value']) ){
+            $model = $this->findModel($post['id']);
+            if($model){
+                $field_name = $post['field_name'];
+                //return var_dump($post['field_name']);
+                if(isset($model->$field_name) ) {
+                    $model->$field_name = $post['value'];
+                    if ($model->save()){
+                        return 'ok';
+                    }else{
+                        return 'Ошибка. Не удалось сохранить Проект '.serialize($model->errors);
+                    }
+                }else{
+                    return 'Ошибка. Поле Проекта не найдено';
+                }
+            }else{
+                return 'Ошибка. Не найден Проект';
+            }
+        }else{
+            return 'Ошибка. Не указаны параметры запроса';
+        }
     }
 
     /**
