@@ -23,6 +23,14 @@ use yii\helpers\Html;
 class Projects extends \yii\db\ActiveRecord
 {
 
+    public static $stageNew = 0;
+    public static $stageTest = 10;
+    public static $stageAgreement = 20;
+    public static $stageWait = 30;
+    public static $stageTZ = 40;
+    public static $stageReady = 50;
+    public static $stageClose = 60;
+
     public static $stageCodes = array(
         0 => "Новый проект",
         10 => "Тестирование",
