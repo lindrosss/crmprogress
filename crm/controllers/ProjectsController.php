@@ -106,10 +106,13 @@ class ProjectsController extends Controller
 
     public function actionCreate_without_redirect()
     {
+        $post = Yii::$app->request->post();
         $model = new Projects();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return 'ok';
+            //return 'ok';
+            return $this->redirect(['companies/update', 'id' => $post['Projects']['id_company']]);
+
         }else{
             return var_dump(Yii::$app->request->post());
         }

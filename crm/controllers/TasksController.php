@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Projects;
 use Yii;
 use app\models\Tasks;
 use app\models\TasksSearch;
@@ -90,11 +91,14 @@ class TasksController extends Controller
 
     public function actionCreate_without_redirect()
     {
+        $post = Yii::$app->request->post();
+        $project = Projects::findOne($post['Tasks']['id_project']);
+        //return var_dump($project);
         $model = new Tasks();
 
-        $post = Yii::$app->request->post();
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return 'ok';
+            //return 'ok';
+            return $this->redirect(['companies/update', 'id' => $project->id_company]);
         }else{
             return var_dump(Yii::$app->request->post());
         }
