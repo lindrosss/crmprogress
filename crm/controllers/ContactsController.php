@@ -111,12 +111,13 @@ class ContactsController extends Controller
 	
 	public function actionCreate_without_redirect()
     {
+        $post = Yii::$app->request->post();
+       // return var_dump($post['Contacts']);
 		$model = new Contacts();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            //return $this->redirect(['/companies/update', 'id' => $model->id_company]);
-            //return var_dump(Yii::$app->request->post());
-            return 'ok';
+            //return 'ok';
+            return $this->redirect(['companies/update', 'id' => $post['Contacts']['id_company']]);
         }else{
             return var_dump(Yii::$app->request->post());
         }
@@ -140,7 +141,34 @@ class ContactsController extends Controller
         return $this->render('update', [
             'model' => $model,
         ]);
-    }	
+    }
+
+    /*Обновление поля контакта*/
+    public function actionUpdate_field()
+    {
+        $post = Yii::$app->request->post();
+        if(isset($post['id']) && isset($post['field_name'])&& isset($post['value']) ){
+            $model = $this->findModel($post['id']);
+            if($model){
+                $field_name = $post['field_name'];
+                //return var_dump($post['field_name']);
+                if(isset($model->$field_name) ) {
+                    $model->$field_name = $post['value'];
+                    if ($model->save()){
+                        return 'ok';
+                    }else{
+                        return 'Ошибка. Не удалось сохранить контакт';
+                    }
+                }else{
+                    return 'Ошибка. Параметр контакта не найден';
+                }
+            }else{
+                return 'Ошибка. Не найден контакт';
+            }
+        }else{
+            return 'Ошибка. Не указаны параметры';
+        }
+    }
 	
 	public function actionUpdate_without_redirect()
     {

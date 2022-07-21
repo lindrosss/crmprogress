@@ -10,11 +10,14 @@ use app\models\Contacts;
 use app\models\Projects;
 use app\models\Tasks;
 use app\models\ProjectsSearch;
+use app\models\Attaches;
+
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
 use yii\filters\AccessControl;
+
+
 
 /**
  * CompaniesController implements the CRUD actions for Companies model.
@@ -133,9 +136,9 @@ class CompaniesController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            //return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['update', 'id' => $model->id]);
 			//$this->actionIndex();
-			return $this->redirect(['index', []]);
+			//return $this->redirect(['index', []]);
         }
 
 		/**/
@@ -155,6 +158,60 @@ class CompaniesController extends Controller
             'searchModelProjects' => $searchModelProjects,
             'dataProviderProjects' => $dataProviderProjects,
         ]);
+    }
+
+    /*Обновление поля Компании*/
+    public function actionUpdate_field()
+    {
+        $post = Yii::$app->request->post();
+        if(isset($post['id']) && isset($post['field_name'])&& isset($post['value']) ){
+            $model = $this->findModel($post['id']);
+            if($model){
+                $field_name = $post['field_name'];
+                //return var_dump($post['field_name']);
+                if(isset($model->$field_name) ) {
+                    $model->$field_name = $post['value'];
+                    if ($model->save()){
+                        return 'ok';
+                    }else{
+                        return 'Ошибка. Не удалось сохранить Компанию '.serialize($model->errors);
+                    }
+                }else{
+                    return 'Ошибка. Поле Компании не найдено';
+                }
+            }else{
+                return 'Ошибка. Не найдена Компания';
+            }
+        }else{
+            return 'Ошибка. Не указаны параметры запроса';
+        }
+    }
+
+    /*Обновление поля Компании*/
+    public function actionUpdate_comment()
+    {
+        $post = Yii::$app->request->post();
+        if(isset($post['name']) ){
+            $id = $post['name'];
+            if(isset($post[$id])){
+                $comment = $post[$id];
+                $model = $this->findModel($id);
+                if($model){
+                    $model->comment = $comment;
+                    if ($model->save()){
+                        return 'ok';
+                    }else{
+                        return 'Ошибка. Не удалось сохранить Компанию '.serialize($model->errors);
+                    }
+                }else{
+                    return 'Ошибка. Не найдена Компания';
+                }
+            }else{
+                return 'Ошибка. Не указаны данные для обновления комментария';
+            }
+        }else{
+            return 'Ошибка. Не указаны параметры запроса';
+        }
     }
 
     public function actionViewcompany($id)
