@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         [
                             'title' => 'Редактировать компанию',
                             'aria-label' => 'Редактировать компанию',
-							'target' => 'blanck',
+							'target' => '_blank',
                             'data-method' => 'post',
                         ]
                     ).'&nbsp&nbsp';
