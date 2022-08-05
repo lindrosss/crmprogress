@@ -104,9 +104,10 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  expose      set the X-Powered-By header                        FALSE
  */
 Kohana::init(array(
-	'base_url'   => '/softprog.ru/',
+	//'base_url'   => '/softprog.ru/',
+    'base_url'   => '/',
     'index_file' => FALSE,
-    'cache_dir' => '/application/cashe'
+    //'cache_dir' => '/application/cashe'
 ));
 //echo $_SERVER['SERVER_PROTOCOL']; return;
 /**
