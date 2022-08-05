@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<link rel="shortcut icon" href="/public/images/favicon.ico">
-		<link type="text/css" rel="stylesheet" href="public/css/template.css?v=1">
+		<link type="text/css" rel="stylesheet" href="public/css/template.css?v=2">
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 		<script src="/public/js/template.js" type="text/javascript"></script>
@@ -65,7 +65,7 @@
 				
 				<ul id="ul_menu">
 					<li <?php if(Request::current()->action()=='index') echo 'class="active"'?>>
-						<a href="/">Главная</a>
+						<a href="/">Р7-Офис</a>
 					</li>
 
                     <li <?php if(Request::current()->action()=='communigate') echo 'class="active"'?>>
