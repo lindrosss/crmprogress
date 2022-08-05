@@ -44,4 +44,16 @@ class Controller_Common extends Controller_Template {
 		$this->template->content = $content;	
 	}
 
+    public function action_communigate()
+    {
+        $content = View::factory('communigate');
+        $this->template->content = $content;
+    }
+
+    public function action_myoffice()
+    {
+        $content = View::factory('myoffice');
+        $this->template->content = $content;
+    }
+
 } 

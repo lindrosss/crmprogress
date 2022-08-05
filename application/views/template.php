@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<link rel="shortcut icon" href="/public/images/favicon.ico">
-		<link type="text/css" rel="stylesheet" href="/public/css/template.css?v=1">
+		<link type="text/css" rel="stylesheet" href="public/css/template.css?v=1">
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 		<script src="/public/js/template.js" type="text/javascript"></script>
@@ -16,26 +16,23 @@
 					case 'index':
 						echo '<title>ООО "ПРОГРЕСС"  | Продажа Р7-офис</title>';
 						break;
-						
-					case 'yslugi':
-						echo '<title>Услуги по монтажу электрических сетей</title>';
-						echo '<meta content="Услуги по монтажу электрических сетей" name="description">';
-						break;
 					
 					case 'licens':
 						echo '<title>Сертификаты</title>';
 						echo '<meta content="Сертификаты" name="description">';
 						break;
 						
-					case 'rekvizity':
-						echo '<title>Реквизиты компании ООО "СЭМ" Строй инжиниринг</title>';
-						echo '<meta content="Реквизиты компании ООО "СЭМ" Строй инжиниринг" name="description">';
-						break;	
+
 							
 					case 'kontakty':
 						echo '<title>Контакты ООО "Прогресс"</title>';
 						echo '<meta content="Контакты ООО "Прогресс" " name="description">';
-						break;		
+						break;
+
+                    case 'communigate':
+                        echo '<title>Communigate, ООО "Прогресс"</title>';
+                        echo '<meta content="communigate, "Прогресс" " name="description">';
+                        break;
 				}
 			?>
 		
@@ -70,10 +67,10 @@
 					<li <?php if(Request::current()->action()=='index') echo 'class="active"'?>>
 						<a href="/">Главная</a>
 					</li>
-					
-					<li <?php if(Request::current()->action()=='kontakty') echo 'class="active"'?>>
-						<a href="/kontakty-ooo-progress">Контакты</a>
-					</li>
+
+                    <li <?php if(Request::current()->action()=='communigate') echo 'class="active"'?>>
+                        <a href="/communigate">communigate</a>
+                    </li>
 
                     <li <?php if(Request::current()->action()=='licens') echo 'class="active"'?>>
                         <a href="/licens-ooo-progress">Сертификаты</a>
