@@ -104,10 +104,11 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  expose      set the X-Powered-By header                        FALSE
  */
 Kohana::init(array(
-	'base_url'   => '/',
+	'base_url'   => '/softprog.ru/',
     'index_file' => FALSE,
+    'cache_dir' => '/application/cashe'
 ));
-
+//echo $_SERVER['SERVER_PROTOCOL']; return;
 /**
  * Attach the file write to logging. Multiple writers are supported.
  */
@@ -172,6 +173,18 @@ Route::set('kontakty', 'kontakty-ooo-progress')
 		'controller' => 'Common',
 		'action'     => 'kontakty',
 	));
+
+Route::set('communigate', 'communigate')
+    ->defaults(array(
+        'controller' => 'Common',
+        'action'     => 'communigate',
+    ));
+
+Route::set('myoffice', 'myoffice')
+    ->defaults(array(
+        'controller' => 'Common',
+        'action'     => 'myoffice',
+    ));
 
  Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
