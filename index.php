@@ -20,7 +20,7 @@ if (version_compare(PHP_VERSION, JOOMLA_MINIMUM_PHP, '<'))
 $startTime = microtime(1);
 $startMem  = memory_get_usage();
 
-echo '<link href="display_none.css" rel="stylesheet"/>';
+
 
 /**
  * Constant that is checked in included files to prevent direct access.
