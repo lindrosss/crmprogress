@@ -1,0 +1,124 @@
+.wrap{
+    background-color:  #203D49;
+    font-family: "PT Sans", Arial, sans-serif;
+}
+
+.container{
+    width: 100% !important;
+}
+
+#company_header{
+
+    //color: #fff!important;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    vertical-align: bottom;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: -.8px;
+}
+
+#company .label
+{
+    //color: #ffffff;
+}
+
+.table{
+    display: table;
+}
+
+.table-row{
+    display: table-row;
+}
+
+.table-cell{
+    display: table-cell;
+    padding: 5px;
+}
+
+#contacts{
+    width: 250px;
+    min-width: 250px;
+    background: #fff;
+}
+
+.contact_item{
+    border-bottom: 1px solid #55595c;
+    //padding-bottom: 5px;
+}
+
+.contact_item .fio{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contact_item input{
+    width: 80%;
+}
+
+.contact_item .save_btn,
+.project_item .save_btn,
+.tasks_item .save_btn{
+    width: 25px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+}
+
+.project_item{
+    min-width: 250px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 3px;
+    margin: 0 0 5px;
+    background: #fff;
+    padding: 5px;
+    position: relative;
+    cursor: default;
+}
+
+.toggle_btn{
+
+}
+
+.btns{
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    max-height: 38px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #2e3640;
+    border: 1px solid #dbdedf;
+    border-radius: 3px;
+    outline: 0;
+    cursor: pointer;
+}
+
+.red{
+    color:red;
+}
+
+.green{
+    color: green;
+}
+
+
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+
