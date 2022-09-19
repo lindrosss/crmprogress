@@ -1,0 +1,31 @@
+# IntelliJ project files
+.idea
+.DS_Store
+
+/assets/
+/protected/runtime/
+/protected/extensions/EPhpThumb
+/protected/extensions/s3
+/protected/extensions/hoauth
+/protected/extensions/yii-debug-toolbar
+/protected/extensions/yii-easyimage
+/protected/extensions/yiidebugtb
+/protected/extensions/yiifilemanager
+/protected/extensions/yiifilemanagerfilepicker
+/protected/vendors/
+/protected/components/S3AssetManager.php
+
+/images/thumb/100x100/
+/images/thumb/250x250/
+/images/thumb/50x50/
+
+#  кеш
+js/dashboard/
+
+/nbproject/
+./nbproject/project.properties
+/node_modules
+
+/index_yii2.php
+/index_api.php
+/.htaccess
