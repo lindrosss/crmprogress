@@ -24,7 +24,7 @@ $this->registerCssFile(Url::to(['web/css/companies/view.css?v=11']));
 
 //$this->registerJsFile('https://code.jquery.com/jquery-latest.min.js',  ['position' => yii\web\View::POS_HEAD]);
 $this->registerJsFile(Url::to(['web/js/jquery.js']));
-$this->registerJsFile(Url::to(['web/js/companies/companies.js?v=62']));
+$this->registerJsFile(Url::to(['web/js/companies/companies.js?v=63']));
 ?>
 <div class="companies-update">
 

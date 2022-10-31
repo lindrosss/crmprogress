@@ -1,4 +1,5 @@
-var jsPath = window.location.origin+'/'; // + "/softprog.ru/crm/";
+var jsPath = window.location.origin + "/softprog.ru/crm/";//local
+var jsPath = window.location.origin + '/crm/';
 
 
 
@@ -100,7 +101,7 @@ function renderContacts() {
     var company_id = $('#company_id').text();
 
     $.ajax({
-        url: jsPath + "/companies/get_contacts_part",
+        url: jsPath + "companies/get_contacts_part",
         type: "POST",
         async: false,
         data:  {
