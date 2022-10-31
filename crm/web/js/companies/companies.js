@@ -100,7 +100,7 @@ function renderContacts() {
     var company_id = $('#company_id').text();
 
     $.ajax({
-        url: jsPath + "companies/get_contacts_part",
+        url: jsPath + "/companies/get_contacts_part",
         type: "POST",
         async: false,
         data:  {
