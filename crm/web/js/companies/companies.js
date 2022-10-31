@@ -1,4 +1,4 @@
-var jsPath = window.location.origin + "/softprog.ru/crm/";
+var jsPath = window.location.origin+'/'; // + "/softprog.ru/crm/";
 
 
 
