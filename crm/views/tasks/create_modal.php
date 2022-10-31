@@ -25,7 +25,7 @@ Modal::begin([
 
     echo \Yii::$app->view->renderFile('@app/views/tasks/_form.php', [
         'model' => $model,
-        'id_company' => $model_company->id,
+        //'id_company' => $model_company->id,
         'id_project' => $id_project,
         'form_begin' => ['action'=>Url::base().'/tasks/create_without_redirect'],
     ]);

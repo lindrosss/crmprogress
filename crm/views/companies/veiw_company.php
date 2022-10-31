@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Компании', 'url' => ['inde
 $this->params['breadcrumbs'][] = ['label' => mb_substr($company->name, 0, 25).'...', 'url' => ['view', 'id' => $company->id]];
 //$this->params['breadcrumbs'][] = 'Редактирование';
 
-$this->registerCssFile(Url::to(['web/css/companies/view.css?v=9']));
+$this->registerCssFile(Url::to(['web/css/companies/view.css?v=11']));
 
 //$this->registerJsFile('https://code.jquery.com/jquery-latest.min.js',  ['position' => yii\web\View::POS_HEAD]);
 $this->registerJsFile(Url::to(['web/js/jquery.js']));
@@ -35,12 +35,8 @@ $this->registerJsFile(Url::to(['web/js/companies/companies.js?v=60']));
 
     <div id="company">
         <div id="status"></div>
-        <div id="company_header"><?php echo $company->name;?></div>
+        <div id="company_header"><?php echo $company->name;?></div><br/>
         <div id="company_id" style="display: none;"><?php echo $company->id;?></div>
-
-        <div class="item">
-            <textarea onchange="updateField($(this), 'textarea_this')" id_item_address="<?php echo $company->id;?>" field_name="address" controller_name="companies" ><?php echo $company->address;?></textarea>
-        </div>
 
         <div class="item">
             <span class="label">ИНН:</span><input onchange="updateField($(this), 'input_this')" id_item_inn="<?php echo $company->id;?>" controller_name="companies" field_name="inn" class="name" value="<?php echo $company->inn; ?>" type="text" />
@@ -55,6 +51,10 @@ $this->registerJsFile(Url::to(['web/js/companies/companies.js?v=60']));
                 }
                 ?>
             </select>
+        </div><br/>
+
+        <div class="item">
+            <textarea onchange="updateField($(this), 'textarea_this')" id_item_address="<?php echo $company->id;?>" field_name="address" controller_name="companies" ><?php echo $company->address;?></textarea>
         </div>
 
         <div class="table">

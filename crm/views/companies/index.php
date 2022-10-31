@@ -47,13 +47,22 @@ $this->params['breadcrumbs'][] = $this->title;
 				}
 			],
 
-            /*
+            //  'name',
+            'inn',
+            'kpp',
+            'address:ntext',
             [
-                'label' => 'Название',
+                'label' => 'Контакты',
+                'attribute' => 'contactsname',
+            ],
+
+            [
+                'label' => '-',
                 'format' => 'raw',
                 'attribute' => 'name',
                 'value' => function($data) {
                     $str ='';
+                    if(Yii::$app->user->identity->id != 103) return $str;
                     $str .= Html::a($data->name.' new',
                             Url::to(['viewcompany', 'id'=>$data->id],[]),
                             [
@@ -66,14 +75,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     return $str;
                 }
-            ],*/
-            //  'name',
-            'inn',
-            'kpp',
-            'address:ntext',
-            [
-                'label' => 'Контакты',
-                'attribute' => 'contactsname',
             ],
             //'comment:ntext',
             //'date_create',
