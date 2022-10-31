@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\datetime\DateTimePicker;
 use yii\jui\DatePicker;
+use yii\widgets\Pjax;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Tasks */
@@ -18,22 +19,23 @@ use yii\jui\DatePicker;
     }
     ?>
 
-    <?php $form = ActiveForm::begin($form_begin); ?>
+    <?php Pjax::begin(['id' => 'modal_pj_tasks']) ?>
 
-    <?= $form->field($model, 'id_project')->hiddenInput()->label(false) ?>
+        <?php $form = ActiveForm::begin($form_begin); ?>
 
-    <input type="hidden" id="id_company" class="form-control" name="id_company" value="<?php echo $id_company;?>">
+            <?= $form->field($model, 'id_project')->hiddenInput()->label(false) ?>
+
+            <?= $form->field($model, 'name')->textarea(['rows' => 6]) ?>
 
 
-    <?= $form->field($model, 'name')->textarea(['rows' => 6]) ?>
+            <?= $form->field($model, 'date_task')->textInput(['type' => 'date']); ?>
 
+            <div class="form-group">
+                <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
+            </div>
 
-    <?= $form->field($model, 'date_task')->textInput(['type' => 'date']); ?>
+        <?php ActiveForm::end(); ?>
 
-    <div class="form-group">
-        <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
-    </div>
-
-    <?php ActiveForm::end(); ?>
+    <?php Pjax::end() ?>
 
 </div>

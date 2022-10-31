@@ -21,9 +21,12 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <?php $this->registerCssFile(Url::to(['web/css/layout.css?v=2']));?>
 </head>
 <body>
+
 <?php $this->beginBody() ?>
+
 
 <div class="wrap">
     <?php
