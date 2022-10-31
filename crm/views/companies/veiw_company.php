@@ -154,7 +154,7 @@ $this->registerJsFile(Url::to(['web/js/companies/companies.js?v=63']));
         </div>
 
     </div>
-    --->
+
 
 
 	
