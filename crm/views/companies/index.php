@@ -59,7 +59,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'label' => '-',
                 'format' => 'raw',
-                'attribute' => 'name',
+               // 'attribute' => 'name',
                 'value' => function($data) {
                     $str ='';
                     if(Yii::$app->user->identity->id != 103) return $str;
