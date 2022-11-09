@@ -1673,14 +1673,14 @@ dl.article-info dd.hits span[class*=" icon-"] {
 .new-look .offcanvas-menu .sp-module ul >li:hover a,
 .new-look .offcanvas-menu .sp-module ul >li:focus a,
 .new-look .offcanvas-menu .sp-module ul >li.active a {
-  background: #22b8f0;
+  background: #20409a;
 }
 .new-look .offcanvas-menu .sp-module ul >li ul li a {
   background-color: #2b2f3b !important;
 }
 .new-look .offcanvas-menu .sp-module ul >li ul li a:hover,
 .new-look .offcanvas-menu .sp-module ul >li ul li a:focus {
-  color: #22b8f0;
+  color: #20409a;
 }
 .new-look .offcanvas-menu .sp-module ul >li .offcanvas-menu-toggler {
   top: 6px;
@@ -2597,7 +2597,7 @@ article.item {
 }
 .helix-social-share .helix-social-share-icon ul li div a:hover,
 .helix-social-share .helix-social-share-icon ul li div a:focus {
-  background: #22b8f0;
+  background: #20409a;
   color: #fff;
 }
 #sp-bottom .sp-module .sp-module-title {
