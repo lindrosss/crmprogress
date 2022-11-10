@@ -97,8 +97,8 @@ class TasksController extends Controller
         $model = new Tasks();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            //return 'ok';
-            return $this->redirect(['companies/update', 'id' => $project->id_company]);
+            return 'ok';
+            //return $this->redirect(['companies/update', 'id' => $project->id_company]);
         }else{
             return var_dump(Yii::$app->request->post());
         }

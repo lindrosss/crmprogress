@@ -110,8 +110,8 @@ class ProjectsController extends Controller
         $model = new Projects();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            //return 'ok';
-            return $this->redirect(['companies/update', 'id' => $post['Projects']['id_company']]);
+            return 'ok';
+            //return $this->redirect(['companies/update', 'id' => $post['Projects']['id_company']]);
 
         }else{
             return var_dump(Yii::$app->request->post());
