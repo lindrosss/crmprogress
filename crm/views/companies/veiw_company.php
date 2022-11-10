@@ -54,7 +54,7 @@ $this->registerJsFile(Url::to(['web/js/companies/companies.js?v=64']));
         </div><br/>
 
         <div class="item">
-            <textarea onchange="updateField($(this), 'textarea_this')" id_item_address="<?php echo $company->id;?>" field_name="address" controller_name="companies" ><?php echo $company->address;?></textarea>
+            <textarea onchange="updateField($(this), 'textarea_this')" id_item_address="<?php echo $company->id;?>" field_name="address" controller_name="companies" style="width: 740px; height: 50px;"><?php echo $company->address;?></textarea>
         </div>
 
         <div class="table">
