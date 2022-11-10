@@ -116,8 +116,8 @@ class ContactsController extends Controller
 		$model = new Contacts();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            //return 'ok';
-            return $this->redirect(['companies/update', 'id' => $post['Contacts']['id_company']]);
+            return 'ok';
+            //return $this->redirect(['companies/update', 'id' => $post['Contacts']['id_company']]);
         }else{
             return var_dump(Yii::$app->request->post());
         }
