@@ -1,4 +1,4 @@
-var jsPath = window.location.origin + "/softprog.ru/crm/";//local
+//var jsPath = window.location.origin + "/softprog.ru/crm/";//local
 var jsPath = window.location.origin + '/crm/';
 
 
@@ -26,7 +26,8 @@ $( document ).ready(function() {
 
          $.ajax({
                 //url: $form.attr('action'),
-                url:'/softprog.ru/crm/contacts/create_without_redirect',
+                //url:'/softprog.ru/crm/contacts/create_without_redirect',
+                url:jsPath +'contacts/create_without_redirect',
                 type: 'POST',
                 data: data,
                 success: function (data) {
@@ -62,7 +63,8 @@ $( document ).ready(function() {
 
         $.ajax({
             //url: $form.attr('action'),
-            url:'/softprog.ru/crm/projects/create_without_redirect',
+            //url:'/softprog.ru/crm/projects/create_without_redirect',
+            url:jsPath +'projects/create_without_redirect',
             type: 'POST',
             data: data,
             success: function (data) {
@@ -302,8 +304,10 @@ function setContentTask(id_project){
                 console.log(data);
 
                 $.ajax({
-                    url:'/softprog.ru/crm/tasks/create_without_redirect',
-                    type: 'POST',
+                    //url:'/softprog.ru/crm/tasks/create_without_redirect',
+                    url:jsPath +'tasks/create_without_redirect',
+
+                        type: 'POST',
                     data: data,
                     success: function (data) {
                         if(data == 'ok'){
