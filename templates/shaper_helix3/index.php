@@ -143,7 +143,7 @@ $doc->addScriptdeclaration("\nvar sp_offanimation = '" . $this->params->get('off
             $preloader_tx = ($this->helix3->getParam('preloader_tx')) ? $this->helix3->getParam('preloader_tx') : '#f5f5f5';
 
             // load css, less and js
-        $this->helix3->addCSS('bootstrap.min.css, font-awesome.min.css, my.css') // CSS Files
+        $this->helix3->addCSS('bootstrap.min.css, font-awesome.min.css, my.css?v=1') // CSS Files
                 ->addJS('bootstrap.min.js, jquery.sticky.js, main.js') // JS Files
                 ->lessInit()->setLessVariables(array(
                     'preset' => $this->helix3->Preset(),
