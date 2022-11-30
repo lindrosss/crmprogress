@@ -1,4 +1,3 @@
-#horisontal_gal span.sigProLinkWrapper a.sigProLink{
-  width: 400px; !important;
-  height: 300px; !important;
+#horisontal_gal span.sigProLinkWrapper a.sigProLink img {
+  background-size: cover;
 }
